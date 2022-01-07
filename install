@@ -1,4 +1,5 @@
+#!/bin/bash
 rm install.sh
 curl -sL https://raw.githubusercontent.com/Sidmaz666/dotfiles/main/install.sh > install.sh
-chmod +x install.sh
+chmod +x install.sh && ./install.sh
 
