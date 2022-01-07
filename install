@@ -1,5 +1,6 @@
 #!/bin/bash
+echo -e "Run the install Script! -> ./install.sh\n"
 rm install.sh
 curl -sL https://raw.githubusercontent.com/Sidmaz666/dotfiles/main/install.sh > install.sh
-chmod +x install.sh && ./install.sh
+chmod +x install.sh 
 
