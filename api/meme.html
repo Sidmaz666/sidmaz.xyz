@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summon Memes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+body{
+  background: #212121;
+  color:#FFFFFF;
+}
+.container{
+  width:60vw;
+  padding:5%;
+  margin-top: 1.5em;
+  margin-left:15%;
+  margin-right:15%;
+  border-top: 10px solid #BDBDBD;
+  border-left: 10px solid #BDBDBD;
+  border-right: 5px solid #424242;
+  border-bottom: 5px solid #424242;
+  border-radius: 15px;
+  cursor: pointer;
+}
+    div.container:hover{
+      background: #424242;
+    }
+    .container > button{
+      margin-top:1%;
+	font-size: 20px;
+	border:0px;
+	border-radius:8px;
+	color:#FFFFFF;
+	background-color:#00838F;
+	font-weight:600;
+	cursor: pointer;
+    }
+    .container > button:hover{
+      background-color:#AEEA00;
+      color:#000000;
+    }
+
+    #meme-container {
+      font-size: 29px;
+      font-weight:300;
+      font-style:oblique;
+    }
+
+    .footer{
+      font-size:15px;
+      margin-top:22rem;
+    }
+
+  </style>
+</head>
+<body>
+  <center>
+ <div class="container" onclick="summonMeme()">
+
+<div id="meme-container">
+</div>
+
+<br><br>
+<button>More Memes!</button>
+ </div>
+
+  </center>
+
+  <script>
+
+function summonMeme()
+    {
+	      document.getElementById("meme-container").innerHTML = `Loading Random Memes . . . `;
+ fetch("https://meme-api.herokuapp.com/gimme")
+  .then(function(response) {
+	if (!response.ok){
+  	summonMeme()	
+	    } else  {
+		  return response.json();
+		}
+  })
+  .then(function(data) {
+	      document.getElementById("meme-container").innerHTML = `<img style="width:40%;height:40%;object-fit:cover; border:20px solid #000000" src=${data.url}>`;
+	      
+  });
+	}
+
+    summonMeme()
+  </script>
+  <center>
+  <div class="footer">
+    <span>© Copyleft 02/07/2022<br> Created By : Sidhartha Mazumder </span>
+  </div>
+  </center>
+</body>
+</html>
