@@ -120,7 +120,8 @@ function Projects(){
 	  justify-center
 	  antialiased
 	  pt-16 pb-16 p-5
-	  w-[14.8rem]
+	  w-60
+	  h-60
 	  rounded-full
 	  text-center	
 	  text-3xl
@@ -148,7 +149,7 @@ function Projects(){
 	    "
 	  >
 
-	Power of Shell Scripts
+	Power of Shell Scripts in Linux
 
 	  </span>
 	</span>
