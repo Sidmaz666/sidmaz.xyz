@@ -11,7 +11,7 @@ function About(){
 		  translate-y-32
 		  bg-black
 		  bg-opacity-50
-		  border-t-2
+		  sm:border-t-2
 		  rounded-t-lg
 		  flex
 		  flex-col
@@ -127,7 +127,16 @@ function About(){
 			  >
 
 
-			    Im a Computer Science student who enjoy the process of web devlopment and writing shell scripts. Beside that I play guitar and music is the energy for my soul.
+			    Im a Computer Science student who enjoy the process of web devlopment and writing shell scripts.
+			    <span
+			      className="
+			      hidden
+			      sm:contents	
+			      "
+			    >
+
+			    Beside that I play guitar and music is the energy for my soul.
+			    </span>
 
 			  </span>
 
