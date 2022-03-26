@@ -120,7 +120,7 @@ function Projects(){
 	  justify-center
 	  antialiased
 	  pt-16 pb-16 p-5
-	  w-60
+	  w-[14.8rem]
 	  rounded-full
 	  text-center	
 	  text-3xl
