@@ -47,7 +47,7 @@ function Projects(){
 	   category="Entertainment"
 	   desc="Access to countless Latest and Old Movies & TV-Series. Select from Multiple Genre such as Drama, Sci-Fi and much more. Search Movies via Number or Alphabet. Get the latest trending Movies/TV-series in Streamosan for Streaming or Downlaoding. "
 	    img="https://github.com/Sidmaz666/Streamosan/raw/main/assets/preview.png"
-	    liveLink="https://streamosan.herokuapp.com/"
+	    liveLink="https://streamosan.netlify.app"
 	    gitLink="https://github.com/Sidmaz666/Streamosan"
 	    icon={<FaReact/>}
 	  />
