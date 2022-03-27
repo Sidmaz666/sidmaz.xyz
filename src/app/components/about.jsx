@@ -127,7 +127,7 @@ function About(){
 			  >
 
 
-			    Im a Computer Science student who enjoy the process of web devlopment and writing shell scripts.
+			    A Computer Science student who enjoy the process of web devlopment and writing shell scripts.
 			    <span
 			      className="
 			      hidden
