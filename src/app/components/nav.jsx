@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBars , FaCode, FaTerminal, FaLeaf, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp } from 'react-icons/fa'
+import { FaBars , FaCode, FaTerminal, FaLeaf, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen } from 'react-icons/fa'
 
 
 function Nav(){
@@ -459,6 +459,41 @@ function Nav(){
 			Instagram	
 		      </span>
 		  </span>
+
+
+		  <span
+		    className="
+		    hover:text-pink-300
+		    cursor-pointer
+		    group
+		    "
+		  >
+		    <a
+		      href="https://codepen.io/sidmaz666" 
+		      rel="noreferrer"
+		      target="_blank">
+			<FaCodepen/>
+		    </a>
+		      <span
+			className="
+			absolute
+			group-hover:flex
+			translate-y-[-2.5rem]
+			left-10
+			hidden
+			pl-1 pr-1
+			rounded-xl
+			text-white
+			font-semibold
+			italic
+			bg-black
+			bg-opacity-50
+			backdrop-blur-sm
+			">
+			CodePen	
+		      </span>
+		  </span>
+
 
 		</div>
 
