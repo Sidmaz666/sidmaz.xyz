@@ -463,7 +463,7 @@ function Nav(){
 
 		  <span
 		    className="
-		    hover:text-pink-300
+		    hover:text-white
 		    cursor-pointer
 		    group
 		    "
