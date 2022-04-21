@@ -28,6 +28,32 @@ function Projects(){
 	  "
 	>
 
+
+	<Card
+	title="Automatic Notification System"
+	name="Automated Notifications"
+	type="Web App"
+	category="Notification Service"
+	desc="A Simple website to send customized automatic schedule Notifications to a given Email."
+	 img="https://user-images.githubusercontent.com/81381178/164507757-55622ff7-e6ff-454a-8783-e871841cb570.png"
+	  gitLink="https://github.com/Sidmaz666/automatic_notification_system.git"
+	  liveLink="https://automaticnotificationsystem.herokuapp.com/"
+	  icon={<FaNodeJs/>}
+	/>
+
+	<Card
+	title="Printing Order Services"
+	name="Printing Order Portal"
+	type="Website"
+	category="E-Commerce"
+	desc="A Demo Website to Place Order to Get your Printed Document or Photo with Admin panel to manage Orders."
+	 img="https://github.com/Sidmaz666/printing_order_services_portal/raw/main/assets/portal.png?raw=true"
+	  gitLink="https://github.com/Sidmaz666/printing_order_services_portal.git"
+	  liveLink="https://printorderportal.herokuapp.com/"
+	  icon={<FaNodeJs/>}
+	/>
+
+
 	<Card
 	title="AniSwim - Website"
 	name="Aniswim"
