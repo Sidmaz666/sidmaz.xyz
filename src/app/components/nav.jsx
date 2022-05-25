@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBars , FaCode, FaTerminal, FaLeaf, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen } from 'react-icons/fa'
+import { FaBars , FaCode, FaTerminal, FaLeaf, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen, FaDiscord, FaLinkedinIn } from 'react-icons/fa'
 
 
 function Nav(){
@@ -494,7 +494,71 @@ function Nav(){
 		      </span>
 		  </span>
 
+		  <span
+		    className="
+		    hover:text-white
+		    cursor-pointer
+		    group
+		    "
+		  >
+		    <a
+		      href="https://linkedin.com/in/sidhartha-mazumder" 
+		      rel="noreferrer"
+		      target="_blank">
+			<FaLinkedinIn/>
+		    </a>
+		      <span
+			className="
+			absolute
+			group-hover:flex
+			translate-y-[-2.5rem]
+			left-10
+			hidden
+			pl-1 pr-1
+			rounded-xl
+			text-blue-500
+			font-semibold
+			italic
+			bg-black
+			bg-opacity-50
+			backdrop-blur-sm
+			">
+			LinkedIn	
+		      </span>
+		  </span>
 
+		  <span
+		    className="
+		    hover:text-white
+		    cursor-pointer
+		    group
+		    "
+		  >
+		    <a
+		      href="https://discord.gg/si_d_maz#6086" 
+		      rel="noreferrer"
+		      target="_blank">
+			<FaDiscord/>
+		    </a>
+		      <span
+			className="
+			absolute
+			group-hover:flex
+			translate-y-[-2.5rem]
+			left-10
+			hidden
+			pl-1 pr-1
+			rounded-xl
+			text-purple-500
+			font-semibold
+			italic
+			bg-black
+			bg-opacity-50
+			backdrop-blur-sm
+			">
+			Discord
+		      </span>
+		  </span>
 		</div>
 
 
