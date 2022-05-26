@@ -15,7 +15,8 @@ function Loader(props){
   useEffect(() => {
     document.body.style.overflow = "hidden"
     setTimeout(() => {
-	document.body.style.overflow = "auto"
+	document.body.style.overflowX = "hidden"
+	document.body.style.overflowY = "auto"
 	setLoading(false)
     },timeout)
 

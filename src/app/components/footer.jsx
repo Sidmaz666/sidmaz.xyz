@@ -8,8 +8,11 @@ function Footer(){
       <div
 	className="
 	bg-[#08091c]
+	flex
 	w-screen
-	translate-x-[-0.60rem]
+	overflow-x-hidden
+	justify-center
+	items-center
 	pl-4
 	"
       >

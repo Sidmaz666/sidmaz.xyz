@@ -15,7 +15,7 @@ function Contact(){
  
     if(isName !== '' && isEmail !== '' && isMessage !== ''){
 
-      if(isMessage.length > 16) {
+      if(isMessage.length > 8) {
 
 
 	if(isEmail.length > 5 && isEmail.indexOf('@') > 0) {
@@ -61,7 +61,7 @@ function Contact(){
 
 
       } else {
-	setSub("The Mesage Should Contain Atleast 16 Characters")
+	setSub("The Mesage Should Contain Atleast 8 Characters")
       }
 
 
@@ -81,7 +81,7 @@ function Contact(){
 	  z-50
 	  bg-black
 	  w-screen
-	  translate-x-[-0.60rem]
+	  translate-y-[-0.60rem]
 	  p-4
 	  "
 	>
