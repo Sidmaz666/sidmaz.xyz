@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaShareSquare, FaNodeJs, FaHtml5 } from 'react-icons/fa'
+import { FaGithub, FaShareSquare, FaHtml5 } from 'react-icons/fa'
 
 import DefImg from './assets/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg'
 

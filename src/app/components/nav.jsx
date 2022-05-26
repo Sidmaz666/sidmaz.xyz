@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBars , FaCode, FaTerminal, FaLeaf, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen, FaDiscord, FaLinkedinIn } from 'react-icons/fa'
+import { FaBars , FaCode, FaTerminal, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen, FaDiscord, FaLinkedinIn } from 'react-icons/fa'
 
 
 function Nav(){

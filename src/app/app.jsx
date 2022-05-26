@@ -1,6 +1,7 @@
 import React from 'react'
 
 import HomePage from './pages/home'
+import ErrorPage from './pages/error'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -32,7 +33,7 @@ function App() {
 	<Route exact path="/*"
 	  element={
 	    <>
-		<span>No Page Found</span>
+	      <ErrorPage/>
 	   </>
 	  }
 	/>

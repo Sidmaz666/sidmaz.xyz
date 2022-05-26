@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { FaReact, FaNodeJs, FaHtml5, FaJs, FaTerminal, FaCss3, FaPhp } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaHtml5, FaJs, FaCss3, FaPhp } from 'react-icons/fa'
 
 import Gif from './assets/e426702edf874b181aced1e2fa5c6cde.gif'
 
