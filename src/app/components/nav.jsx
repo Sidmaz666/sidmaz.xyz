@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBars , FaCode, FaTerminal, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen, FaDiscord, FaLinkedinIn } from 'react-icons/fa'
+import { FaBars , FaCode, FaTerminal, FaUserAlt , FaEnvelope, FaInstagram, FaGithub, FaCaretUp, FaArrowUp, FaCodepen, FaDiscord, FaLinkedinIn, FaUser, FaLeaf } from 'react-icons/fa'
 
 
 function Nav(){
@@ -130,6 +130,25 @@ function Nav(){
 		</span>
 	</a>
 
+	<a
+	  href="/blog"
+	  rel="noreferrer"
+	  className="
+	  hover:bg-[#263238]
+	  rounded-xl
+	  w-full
+	  flex
+	  items-center
+	  justify-center
+	  space-x-3
+	  text-[#FDD835]
+	  hover:text-white"
+	>
+	<FaLeaf/> 
+		<span>
+		    Blogs
+		</span>
+	</a>
 	</div>
       </>
     )
@@ -374,6 +393,66 @@ function Nav(){
 		    
 		    </span>
 
+		    <span
+		      className="
+		      bg-gray-900
+		      hover:bg-gray-800
+		      flex
+		      items-center
+		      justify-center
+		      p-1
+		      text-2xl
+		      rounded-3xl
+		      group
+		      "
+		    >
+			<a rel="noreferrer" href="/blog">
+			<FaLeaf/>
+			</a>
+
+			  <span
+			    className="
+			    hidden
+			    absolute
+			    whitespace-nowrap
+			    top-14
+			    group-hover:flex
+			    pl-1 pr-1
+			    font-semibold
+			    rounded-xl
+			    text-[#FDD835]
+			    italic
+			    bg-[#37474F90]
+			    "
+			  >
+				Blogs
+			  </span>
+		    
+		    </span>
+	  <a href="/login"
+	    className="
+	    flex
+	    items-center
+	    space-x-2 
+	    bg-[#00C853]
+	    text-lg
+	    font-semibold
+	    whitespace-nowrap
+	    p-1
+	    pl-3
+	    pr-3
+	    text-gray-900
+	    hover:bg-green-600
+	    hover:text-white
+	    transition-all duration-150 ease-in-out
+	    rounded-md
+	    "
+	  >
+	    <FaUser/>
+	    <span>
+	    Login
+	    </span>
+	  </a>
 		 </div>
 
 		</nav>

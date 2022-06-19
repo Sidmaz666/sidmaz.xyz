@@ -71,8 +71,40 @@ function Intro(){
 	  Sidhartha Mazumder
 	
 	</h1>
+	    
 </span>
 
+	  <div
+	    className="
+	    md:hidden
+	    flex
+	    justify-end
+	    pr-10
+	    w-screen
+	    items-center
+	    font-semibold
+	    text-lg
+	    absolute
+	    top-8
+	    left-0
+	    rounded-md
+	    text-white
+	    transition-all duration-150 ease-in-out
+	    "
+	  >
+	    
+	      <a
+		className="font-sans
+		rounded-md
+		-translate-y-[1rem]
+		translate-x-[1rem]
+		p-2 pl-5 pr-5 bg-gray-900/80 hover:bg-gray-900 text-white text-opacity-50 hover:text-opacity-100  "
+	       href="/login">
+	    	Login
+	      </a>
+	    
+
+	  </div>
 
 	</div>
 

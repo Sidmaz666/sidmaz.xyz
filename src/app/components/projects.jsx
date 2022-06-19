@@ -54,17 +54,6 @@ function Projects(){
 	/>
 
 
-	<Card
-	title="AniSwim - Website"
-	name="Aniswim"
-	type="Website"
-	category="Entertainment"
-	desc="A simple website to stream and download anime, the site provides a vast collection of Anime Series & Movies along with the generic features such as Search & sort based on Popularity & Uploads"
-	 img="https://github.com/Sidmaz666/aniswim-website/raw/main/assets/preview.png"
-	  gitLink="https://github.com/Sidmaz666/aniswim-website"
-	  liveLink="https://aniswim.herokuapp.com/"
-	  icon={<FaNodeJs/>}
-	/>
 
 	  <Card
 	   title="Streamosan - Website"
@@ -91,18 +80,6 @@ function Projects(){
 	    icon={<FaPhp/>}
 	  />
 
-
-	  <Card
-		title="Aniswim - API"
-	        name="AniSwim-API"
-	    	type="API"
-	    	icon={<FaNodeJs/>}
-	    	img={ apiImg1 }
-	    	category="JSON API, Scrapper"
-	    	desc="API Provides vast list of Anime Movies and TV-Series details along with the Video Links"
-	    	gitLink="https://github.com/Sidmaz666/aniswim-api"
-	    	liveLink="https://aniswim-api.herokuapp.com/"
-	  />
 
 
 	  <Card

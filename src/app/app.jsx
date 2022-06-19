@@ -1,7 +1,8 @@
 import React from 'react'
-
 import HomePage from './pages/home'
 import ErrorPage from './pages/error'
+import AdminPage from './pages/admin'
+import BlogPage from './pages/blog'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -24,7 +25,16 @@ function App() {
 	<Route exact path="/blog"
 	  element={
 	    <>
-		<span>Blogs</span>
+	      <BlogPage/>
+	   </>
+	  }
+	/>
+
+
+	<Route exact path="/login"
+	  element={
+	    <>
+	      <AdminPage/>
 	   </>
 	  }
 	/>
