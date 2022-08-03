@@ -129,7 +129,7 @@ function Nav(){
 		    Contact
 		</span>
 	</a>
-
+	  {/*
 	<a
 	  href="/blog"
 	  rel="noreferrer"
@@ -149,6 +149,7 @@ function Nav(){
 		    Blogs
 		</span>
 	</a>
+	  */}
 	</div>
       </>
     )
@@ -393,6 +394,7 @@ function Nav(){
 		    
 		    </span>
 
+		      {/*
 		    <span
 		      className="
 		      bg-gray-900
@@ -453,6 +455,7 @@ function Nav(){
 	    Login
 	    </span>
 	  </a>
+	  */}
 		 </div>
 
 		</nav>

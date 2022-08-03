@@ -28,6 +28,17 @@ function Projects(){
 	  "
 	>
 
+	<Card
+	title="Aniswim - Website"
+	name="Aniswim"
+	type="Web App"
+	category="Entertainment"
+	desc="Stream and Download Latest,Recent Released Anime, Search for your favourite anime in Aniswim!"
+	img="https://raw.githubusercontent.com/Sidmaz666/aniswim-website/main/assets/preview.png"
+	gitLink="https://github.com/Sidmaz666/aniswim-website"
+	liveLink="https://aniswim.herokuapp.com/"
+	icon={<FaNodeJs/>}
+	/>
 
 	<Card
 	title="Automatic Notification System"
@@ -37,8 +48,8 @@ function Projects(){
 	desc="A Simple website to send customized automatic scheduled Notifications to a given Email."
 	 img="https://user-images.githubusercontent.com/81381178/164507757-55622ff7-e6ff-454a-8783-e871841cb570.png"
 	  gitLink="https://github.com/Sidmaz666/automatic_notification_system.git"
-	  liveLink="https://automaticnotificationsystem.herokuapp.com/"
 	  icon={<FaNodeJs/>}
+	  addClass="hidden"
 	/>
 
 	<Card
@@ -49,8 +60,8 @@ function Projects(){
 	desc="A Demo Website to Place Order to Get your Printed Document or Photo with Admin panel to manage Orders."
 	 img="https://github.com/Sidmaz666/printing_order_services_portal/raw/main/assets/portal.png?raw=true"
 	  gitLink="https://github.com/Sidmaz666/printing_order_services_portal.git"
-	  liveLink="https://printorderportal.herokuapp.com/"
 	  icon={<FaNodeJs/>}
+	  addClass="hidden"
 	/>
 
 
@@ -76,7 +87,7 @@ function Projects(){
 	    desc="Register, Login for Admin & Employee. Add aditional information, Employee details. Register Employee daily record. Admin access to Employee details."
 	    img="https://github.com/Sidmaz666/Minimal_EDRS/raw/main/preview.png?raw=true"
 	    gitLink="https://github.com/Sidmaz666/Minimal_EDRS"
-	    liveLink="https://recordemployee.000webhostapp.com/"
+	    addClass="hidden"
 	    icon={<FaPhp/>}
 	  />
 
@@ -93,6 +104,21 @@ function Projects(){
 		gitLink="https://github.com/Sidmaz666/streamo-api"
 	    	liveLink="https://streamo-api.herokuapp.com/"
 	  />
+
+
+
+	  <Card
+		title="Aniswim - API"
+	        name="Aniswim - API"
+	    	type="API"
+	    	icon={<FaNodeJs/>}
+	    	img={ apiImg1 }
+	    	category="JSON API, Scrapper"
+	    	desc="API Provides vast list of Anime Movies and TV-Series details along with the Video Links"
+		gitLink="https://github.com/Sidmaz666/aniswim-api"
+	    	liveLink="https://aniswim-api.herokuapp.com/"
+	  />
+
 	    <b id="bash"></b>
 	  <br/>
 	  <br/>

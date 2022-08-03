@@ -74,6 +74,7 @@ function Intro(){
 	    
 </span>
 
+	  {/*
 	  <div
 	    className="
 	    md:hidden
@@ -93,6 +94,7 @@ function Intro(){
 	    "
 	  >
 	    
+
 	      <a
 		className="font-sans
 		rounded-md
@@ -105,6 +107,7 @@ function Intro(){
 	    
 
 	  </div>
+	  */}
 
 	</div>
 
