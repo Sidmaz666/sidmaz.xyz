@@ -29,6 +29,18 @@ function Projects(){
 	>
 
 	<Card
+	title="Manga Reader - Website"
+	name="Manga Reader"
+	type="Web App"
+	category="Entertainment"
+	desc="Read the latest, popular and updated Manga!"
+	img="https://github.com/Sidmaz666/mangareaderr/raw/main/assets/img.png"
+	gitLink="https://github.com/Sidmaz666/mangareaderr"
+	liveLink="https://mangareaderr.netlify.app/"
+	icon={<FaReact/>}
+	/>
+
+	<Card
 	title="Aniswim - Website"
 	name="Aniswim"
 	type="Web App"
@@ -89,6 +101,20 @@ function Projects(){
 	    gitLink="https://github.com/Sidmaz666/Minimal_EDRS"
 	    addClass="hidden"
 	    icon={<FaPhp/>}
+	  />
+
+
+
+	  <Card
+		title="MangaFetch - API"
+	        name="MangaFetch - API"
+	    	type="API"
+	    	icon={<FaNodeJs/>}
+	    	img="https://github.com/Sidmaz666/manga-api/raw/main/assets/manga-api-logo.png"
+	    	category="JSON API, Scrapper"
+	    	desc="API Provides vast list of Manga details along with the Chapter Images"
+		gitLink="https://github.com/Sidmaz666/manga-api/tree/deploy_api"
+	    	liveLink="https://fetch-manga.herokuapp.com/"
 	  />
 
 
