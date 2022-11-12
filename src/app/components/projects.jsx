@@ -48,8 +48,8 @@ function Projects(){
 	desc="Stream and Download Latest,Recent Released Anime, Search for your favourite anime in Aniswim!"
 	img="https://raw.githubusercontent.com/Sidmaz666/aniswim-website/main/assets/preview.png"
 	gitLink="https://github.com/Sidmaz666/aniswim-website"
-	liveLink="https://aniswim.herokuapp.com/"
-	icon={<FaNodeJs/>}
+	liveLink="https://aniswim.netlify.app/"
+	icon={<FaReact/>}
 	/>
 
 	<Card
@@ -114,7 +114,7 @@ function Projects(){
 	    	category="JSON API, Scrapper"
 	    	desc="API Provides vast list of Manga details along with the Chapter Images"
 		gitLink="https://github.com/Sidmaz666/manga-api/tree/deploy_api"
-	    	liveLink="https://fetch-manga.herokuapp.com/"
+	    	liveLink="https://manga-api-swrz.onrender.com/"
 	  />
 
 
@@ -142,7 +142,7 @@ function Projects(){
 	    	category="JSON API, Scrapper"
 	    	desc="API Provides vast list of Anime Movies and TV-Series details along with the Video Links"
 		gitLink="https://github.com/Sidmaz666/aniswim-api"
-	    	liveLink="https://aniswim-api.herokuapp.com/"
+	    	liveLink="https://aniswim-api.vercel.app/"
 	  />
 
 	    <b id="bash"></b>
