@@ -1,3 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fccfd2fa-2154-45d3-92c8-bd4477f460d4/deploy-status)](https://app.netlify.com/sites/sidmaz/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3820915-a389-45ca-a6cb-41d202fcdff0/deploy-status)](https://app.netlify.com/sites/sidmaz/deploys)
 
-<a href="https://sidmaz.xyz">Visit</a>
+<a href="https://sidmaz.netlify.app">Visit</a>
