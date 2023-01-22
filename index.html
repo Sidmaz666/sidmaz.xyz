@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | Sidhartha Mazumder</title>
+   <meta name="theme-color" content="#FFFFFF">
+    <meta
+      name="description"
+      content="personal website along with user details"
+    >
+  <link rel="icon" href="./img/favicon.ico" />
+  <link rel="apple-touch-icon" href="./img/logo192.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- LOADING PAGE SECTION  -->
+  
+    <div class="loading-page flex justify-center items-center w-screen h-screen flex-col space-y-5">
+
+      <img class="w-[80px] h-[80px] "
+      src="./img/loading.gif" alt="Loading GIF">	
+      
+      <span class="text-lg font-bold font-mono">Loading <span>...</span> </span>
+
+  </div>
+
+
+  <!-- MAIN PAGE SECTION  -->
+
+	<div
+	  class="main-page flex justify-center
+	  items-center w-screen h-screen hidden overflow-y-auto ">
+	
+
+	<!-- HOME PAGE SECTION  -->
+
+	  <div class="flex md:flex-row flex-col-reverse home-page hidden">
+	    <div class=" flex flex-col mt-5 md:mt-0 w-[280px] md:w-[300px] items-center">
+	      <span 
+		class="text-2xl font-bold font-mono italic w-full 
+		md:text-left
+		text-center
+		p-2 
+		text-[#263238]
+		border-b-4 border-[#263238]
+		">
+		About
+		<i class="fa-solid fa-code"></i>
+      		</span>
+
+		<span class="p-2 mt-2 font-semibold text-gray-700 md:text-lg">
+		  <i>Hello World!</i> My name is 
+			<span class="font-mono font-bold text-[#263238] text-xl">Sidhartha Mazumder</span>,
+			I live in 
+			<span
+			class="font-bold text-[#263238] italic "
+			>
+			<a href="https://goo.gl/maps/z8MHJSTj1Eiagv2A8" target="_blank">
+			Dibrugarh >> Assam >> India</span>
+			</a>.
+			<br/>
+			<br/>
+			Been developing the web for more than 3 years.
+			Have written a few shell scripts...
+			<br/>
+			<br/>
+
+		<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('know-more-page'); document.title = 'Information | Sidhartha Mazumder'"
+		  >
+		  Know More <i class="fa-solid fa-user"></i>
+		</button>
+
+		<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('contact-page'); document.title = 'Contact | Sidhartha Mazumder'"
+		  >
+		  Contact <i class="fa-solid fa-envelope"></i>
+		</button>
+		</span>
+	  </div>
+
+	  <div class="flex flex-col items-center">
+	
+	    	<div class="bg-gray-300 p-2 rounded-full">
+		<img 
+	  	class="h-[200px] w-[200px] rounded-full"
+	  	src="./img/sidhartha_mazumder.jpg"
+		alt="Sidhartha Mazumder">
+	  	</div>
+
+		<div class="mt-2 flex space-x-3 text-xl">
+		<a href="https://www.linkedin.com/in/sidhartha-mazumder/" tilte="LinkedIn"><i class="fa-brands fa-linkedin text-[#0D47A1]"></i></a>
+		<a href="https://github.com/Sidmaz666"><i class="fa-brands fa-github text-[#263238]" title="Github"></i></a>
+		<a href="https://www.instagram.com/userofthisbiologicalmachine" title="Instagram"><i class="fa-brands fa-square-instagram text-[#F50057]"></i></a>
+		<a href="https://wa.me/917002511375" title="WhatsApp"><i class="fa-brands fa-square-whatsapp text-[#1B5E20]"></i></a>
+			</div>
+	 	 </div>
+	  </div>
+
+	<!-- KNOW MORE PAGE SECTION  -->
+	
+	<div class="hidden flex flex-col know-more-page">
+	
+	      <div class="w-[280px] md:w-[300px] flex flex-col">
+	      <span 
+		class="text-2xl font-bold font-mono italic w-full 
+		text-center
+		p-2 
+		text-[#263238]
+		border-b-4 border-[#263238]
+		">
+		
+		SKILLS
+		<i class="fa-solid fa-book-skull"></i>
+      		</span>
+
+	    <ol class="space-y-4 text-gray-700 mt-2 font-semibold ">
+	     <li>
+	       <span class="font-mono text-lg font-bold 
+		text-[#263238]
+		 "> 
+		Languages :
+	       </span>
+	      <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
+		 <li><i class="fa-brands fa-html5"></i> HTML</li>
+		 <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+		 <li><i class="fa-brands fa-js"></i> JavaScript</li>
+		 <li><i class="fa-brands fa-php"></i> PHP</li>
+		 <li><i class="fa-brands fa-linux"></i> Bash</li>
+	      </ul>
+	   </li>
+	   <li>
+	       <span class="font-mono text-lg font-bold 
+		text-[#263238]
+		 "> 
+		  Frameworks :
+	       </span>
+	      <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
+		 <li><i class="fa-brands fa-css3"></i> TailwindCSS</li>
+		 <li><i class="fa-brands fa-node-js"></i> NodeJS</li>
+		 <li><i class="fa-brands fa-react"></i> React</li>
+	      </ul>
+	    </li>
+	      <li>
+	       <span class="font-mono text-lg font-bold 
+		text-[#263238]
+		 "> 
+		 Experience :
+	       </span>
+	      <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
+		 <li><i class="fa-solid fa-code"></i> Web Development</li>
+		 <li><i class="fa-solid fa-pen-to-square"></i> Content Writer</li>
+		 <li><i class="fa-solid fa-guitar"></i> Guitar Teacher</li>
+	      </ul>
+	   </li>
+	</ol>
+
+	<div class="flex justify-center flex-col md:flex-row md:space-x-3 mt-3 ">
+
+	  	<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('home-page'); document.title = 'Home | Sidhartha Mazumder'"
+		  >
+		  Home <i class="fa-solid fa-house"></i>
+		</button>
+
+		<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('contact-page'); document.title = 'Contact | Sidhartha Mazumder'"
+		  >
+		  Contact <i class="fa-solid fa-envelope"></i>
+		</button>
+
+	</div>
+	  	</div>
+
+	</div>
+
+	<!-- CONTACT PAGE SECTION  -->
+	
+	<div class="flex flex-col hidden contact-page">
+	  
+	  <div class="w-[280px] md:w-[300px] flex flex-col mb-5">
+
+	      <span 
+		class="text-2xl font-bold font-mono italic w-full 
+		text-center
+		p-2 
+		text-[#092b20]
+		border-b-4 border-[#092b20]
+		mb-3
+		">
+		
+		CONTACT
+		<i class="fa-solid fa-address-card"></i>
+      		</span>
+
+		<span 
+		  class="flex flex-col w-full"
+		  id="contact-error">
+		</span>
+
+	    <form action="" 
+		class="flex flex-col
+		justify-center"
+		method="post"
+	        id="contact-form"
+	        accept-charset="utf-8">
+	    
+	      <div class="flex flex-col p-2">
+	      <span class="mb-2 font-semibold text-gray-800 font-mono text-lg">
+		  Name <i class="fa-solid fa-user"></i>
+		</span>
+		<input
+		class="p-1 border-2 border-gray-800/70 rounded-[5px] font-semibold
+		text-lg text-gray-800/90"
+		placeholder="John Dee"
+		id="contact-name"
+		name="contact-name"
+		type="text">
+	    </div> 	
+		
+	      <div class="flex flex-col p-2">
+	      <span class="mb-2 font-semibold text-gray-800 font-mono">
+		  Email <i class="fa-solid fa-at"></i>
+		</span>
+		<input
+		class="p-1 border-2 border-gray-800/70 rounded-[5px] font-semibold
+		text-lg text-gray-800/90"
+		placeholder="user@domain.top"
+		name="contact-email"
+		id="contact-email"
+		type="email">
+	    </div> 	
+
+	      <div class="flex flex-col p-2">
+	      <span class="mb-2 font-semibold text-gray-800 font-mono">
+		  Message  <i class="fa-solid fa-pen-to-square"></i>
+		</span>
+		<textarea 
+		    class="  border-2 border-gray-800/70 
+		    p-1 text-lg text-gray-800/90
+		    font-semibold
+		    rounded-lg h-24 resize-none"
+		    id="contact-message"
+		    name="contact-message"
+		    placeholder="Type Your Message..."
+		  ></textarea>
+	    </div> 	
+
+	      <div class="flex flex-col p-2">
+	    <button
+		 class="mt-3 bg-[#065c08] text-white p-2
+		 rounded-[8px] font-bold
+		 hover:bg-[#034506] outline-none w-full"
+		 id="contact-button"
+		 name="contact-button"
+		 type="submit">
+		Send <i class="fa-solid fa-envelope"></i>
+	    </button>
+	    </div>
+
+	    </form>
+
+	  </div>
+	
+	  <div class="flex justify-center flex-col md:flex-row md:space-x-3 mt-3 ">
+	  	<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('home-page'); document.title = 'Home | Sidhartha Mazumder'"
+		  >
+		  Home <i class="fa-solid fa-house"></i>
+		</button>
+		<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('know-more-page'); document.title = 'Information | Sidhartha Mazumder'"
+		  >
+		  Know More <i class="fa-solid fa-user"></i>
+		</button>
+	</div>
+      </div>
+
+      <!-- ERROR PAGE -->
+
+	<div class="flex flex-col hidden error-page">
+	
+	    <div class=" flex flex-col w-[280px] md:w-[300px] justify-center items-center">
+
+	      <div id="show-anime-container"></div>
+
+	<span
+	    class="p-2 text-3xl font-bold font-mono text-gray-800 flex flex-col w-full items-center"
+	>
+		<span>ERROR 404</span>
+		<span>PAGE NOT FOUND</span>
+	</span>
+
+	  	<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="window.location.href = '/'"
+		  >
+		  Home <i class="fa-solid fa-house"></i>
+		</button>
+
+	    </div>
+
+	</div>
+
+    </div>
+
+</body>
+</html>
