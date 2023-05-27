@@ -4,11 +4,82 @@ function loading_screen() {
     clearTimeout(loading_screenTimeout);
     document.querySelector(`.main-page`).classList.toggle('hidden')
     document.querySelector(`.home-page`).classList.toggle('hidden')
+    const screenHeight = window.innerHeight + 50;
+    document.body.insertAdjacentHTML("beforeend",
+    `
+      <section id="bg-animation" class="absolute flex-col top-0 left-0 w-full z-[-1] opacity-[50%]">
+      <div class="h-[${screenHeight/6}px] flex w-full">
+      </div>
+      <div class="h-[${screenHeight/6}px] flex w-full">
+      </div>
+      <div class="h-[${screenHeight/6}px] flex w-full">
+      </div>
+      <div class="h-[${screenHeight/6}px] flex w-full">
+      </div>
+      <div class="h-[${screenHeight/6}px] flex w-full">
+      </div>
+      <div class="h-[${screenHeight/6}px] flex w-full">
+      </div>
+      </section>
+
+    `)
+    bg_animation()
   }, 3000);
+}
+
+function removeClassByRegex(element, classNameRegex) {
+    element.className = element.className.replace(classNameRegex, '');
+  
+}
+
+function generateRandomHexColor() {
+  
+  const colors = [
+    	 "#FFB84C",
+    	 "#F266AB",
+    	 "#A459D1",
+    	 "#2CD3E1",
+    	 "#865DFF",
+    	 "#E384FF",
+    	 "#FFA3FD",
+    	 "#E76161",
+    	 "#B04759"
+  ]	
+  	const randomNumber = Math.floor(Math.random() * colors.length)
+  	return colors[randomNumber]
+
+
+}
+
+
+function bg_animation() {
+  let selected_div = 0
+  setInterval(() => {
+   document
+      .querySelectorAll('#bg-animation > div')[selected_div]
+      .classList.add(`bg-[${generateRandomHexColor()}]`)
+   document
+      .querySelectorAll('#bg-animation > div')[selected_div]
+      .classList.add(`${Math.random() > 0.5 ? '-' : ''}translate-x-[${Math.floor(Math.random() * ((window.innerWidth / 2) - 100 + 1) + 50)}px]`)
+    document.querySelectorAll('#bg-animation > div')
+      .forEach((d,i) => {
+	if(i !== selected_div){
+	  removeClassByRegex(d,/bg-\[[^\]]+\]/ )
+	  removeClassByRegex(d,/translate-x-\[[^\]]+\]/ )
+	  removeClassByRegex(d,/-translate-x-\[[^\]]+\]/ )
+	}
+      })
+    if(selected_div == 5){
+      selected_div = 0
+    } else{
+      selected_div++
+    }
+  },300)
 }
 
 function handlePage(activePageClass){
   const allPages = [
+    "project-page",
     "home-page",
     "know-more-page",
     "contact-page",
@@ -152,7 +223,7 @@ async function setAnimeGIF(){
     `)
 }
 
-window.onload = function () {
+window.onload = async function () {
   const validPath = '/'
   const currentPath = window.location.pathname
   if(currentPath !== validPath){

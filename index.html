@@ -14,10 +14,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    * {
+      font-family: 'Lato', sans-serif;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #BDBDBD;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #263238;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #37474F;
+    }
+  </style>
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="./js/main.js" defer></script>
 </head>
-<body>
+<body class="overflow-hidden">
 
   <!-- LOADING PAGE SECTION  -->
   
@@ -29,6 +48,7 @@
       <span class="text-lg font-bold font-mono">Loading <span>...</span> </span>
 
   </div>
+
 
 
   <!-- MAIN PAGE SECTION  -->
@@ -66,27 +86,34 @@
 			</a>.
 			<br/>
 			<br/>
+			<p>
 			Been developing the web for more than 3 years.
-			Have written a few shell scripts...
+			Still learning everyday...
+			</p>
 			<br/>
-			<br/>
-
 		<button
 		 class="mt-3 bg-[#263238] text-white p-1 
 		 pl-4 pr-4 rounded-[8px] font-bold
-		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 hover:bg-[#37474F] outline-none w-full"
+		 onclick="handlePage('project-page'); document.title = 'Projects | Sidhartha Mazumder'"
+		  >
+		  Projects&nbsp;&nbsp;<i class="fa-solid fa-pen-to-square"></i> 
+		</button>
+		<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full"
 		 onclick="handlePage('know-more-page'); document.title = 'Information | Sidhartha Mazumder'"
 		  >
-		  Know More <i class="fa-solid fa-user"></i>
+		  Know More &nbsp;&nbsp;<i class="fa-solid fa-user"></i>
 		</button>
-
 		<button
 		 class="mt-3 bg-[#263238] text-white p-1 
 		 pl-4 pr-4 rounded-[8px] font-bold
-		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 hover:bg-[#37474F] outline-none w-full"
 		 onclick="handlePage('contact-page'); document.title = 'Contact | Sidhartha Mazumder'"
 		  >
-		  Contact <i class="fa-solid fa-envelope"></i>
+		  Contact &nbsp;&nbsp;<i class="fa-solid fa-envelope"></i>
 		</button>
 		</span>
 	  </div>
@@ -103,11 +130,480 @@
 		<div class="mt-2 flex space-x-3 text-xl">
 		<a href="https://www.linkedin.com/in/sidhartha-mazumder/" tilte="LinkedIn"><i class="fa-brands fa-linkedin text-[#0D47A1]"></i></a>
 		<a href="https://github.com/Sidmaz666"><i class="fa-brands fa-github text-[#263238]" title="Github"></i></a>
-		<a href="https://www.instagram.com/userofthisbiologicalmachine" title="Instagram"><i class="fa-brands fa-square-instagram text-[#F50057]"></i></a>
+		<a href="https://www.instagram.com/userofthismachine" title="Instagram"><i class="fa-brands fa-square-instagram text-[#F50057]"></i></a>
 		<a href="https://wa.me/917002511375" title="WhatsApp"><i class="fa-brands fa-square-whatsapp text-[#1B5E20]"></i></a>
-			</div>
-	 	 </div>
+		  </div>
+		  <img src="./img/anime-dance.webp"
+		  class="w-[80px] h-[80px] absolute top-0 left-0 md:w-[250px] md:h-[250px] md:relative"
+		  alt="Anna Dance">
+	    </div>
 	  </div>
+
+	  <!-- Project Page -->
+
+	<div class="hidden flex flex-col project-page">
+	
+	      <div class="w-[280px] md:w-[300px] flex flex-col">
+	      <span 
+		class="text-2xl font-bold font-mono italic w-full 
+		text-center
+		p-2 
+		text-[#263238]
+		border-b-4 border-[#263238]
+		">
+		
+		Projects
+		<i class="fa-solid fa-diagram-project"></i>
+      		</span>
+
+		<div class="flex flex-col p-2 space-y-2
+		  w-full h-[460px] overflow-y-auto 
+		  font-semibold text-gray-900 ">
+		
+		  <!-- Project List Cards -->
+
+		  <div class="flex flex-col rounded-md shadow-xl border-2
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Aniswim
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-react"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     A simple Node anime website using aniswim-api.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://aniswim.netlify.app" target="_blank">Visit</a>
+			</span>
+		  </div>
+
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Aniswim-API
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-node-js"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     A simple API to get anime details and video links.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : API
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://aniswim-api.vercel.app" target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> News API 
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-node-js"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     Get the Latest News From 3 Different sources!
+
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : API
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://github.com/Sidmaz666/simple-news-api"
+			 target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Printing Services 
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-node-js"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     A Demo Website to Place Order to Get your Printed Document or Photo with Admin panel to manage Orders.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://github.com/Sidmaz666/printing_order_services_portal"
+			 target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Informaman 
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-solid fa-code"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     Fetch Client Details Along With Anime Quotes and Horoscope.
+
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://informaman.netlify.app/"
+			 target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Workout Tracker
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-solid fa-code"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     Track Your Workout progress using the workout tracker web app.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Web App
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://workoutprogress.netlify.app/" target="_blank">Visit</a>
+			</span>
+		  </div>
+		
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Mangareaderr 
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-react"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     React Website For Manga Readers using FetchManga API
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://mangareaderr.netlify.app/"
+			 target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> manga-api 
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-node-js"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     A Simple API to get latest Available Manga.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : API
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://github.com/Sidmaz666/manga-api"
+			 target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Leddit 
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-solid fa-code"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			    Tik-Tok/Reels/Memes from Reddit Front End using teddit.net API.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://leddit.netlify.app/"
+			 target="_blank">Visit</a>
+			</span>
+		  </div>
+
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Fragile Heart
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-solid fa-code"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     A simple web game, try to protect the heart from the obstacles and gain more life!
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Game
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://fragileheart.netlify.app/" target="_blank">Visit</a>
+			</span>
+		  </div>
+
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Skeleton Blog
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-php"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     A minimal Blog Management System (CMS). No Front-End Work or Style has been done so anyone can style and customize it to their own liking :) Check the Config Flie!
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://github.com/Sidmaz666/skeleton_blog_management/tree/front-end" target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg">
+		     Title: &nbsp;&nbsp;<span class="text-black"> Funkytype
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-solid fa-code"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     Test Your Typing Skills,Get Your WPM,Accuracy and other details to improve your typing skills.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : Website
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://funkytype.netlify.app/" target="_blank">Visit</a>
+			</span>
+		  </div>
+
+
+
+		  <div class="flex flex-col rounded-md shadow-xl
+		    hover:opacity-[90%]
+		    hover:scale-[1.02]
+		    border-2 border-[#263238]
+		    space-y-3 p-2 bg-gray-200 opacity-[80%]">
+			
+		    <span class="relative text-lg text-wrap">
+		     Title: &nbsp;&nbsp;<span class="text-black"> race_detector
+		      </span>
+			<span 
+		        class="absolute right-0 bottom-0">
+			  <i class="fa-brands fa-node-js"></i>
+			</span>
+			 </span>
+
+			 <span>
+			   Description: 
+			  &nbsp;&nbsp;
+			   <span class="italic text-black">
+			     An Image Classification AI to Detect Ethnicity, Country By Image.
+			   </span>
+			 </span>
+			<span class="relative">
+			  Type : AI
+			<a 
+			 class="absolute right-0 bottom-0 
+				text-blue-900 font-bold text-lg"
+			 href="https://github.com/Sidmaz666/race_detector_image_classification_ai" target="_blank">Visit</a>
+			</span>
+		  </div>
+
+		</div>
+
+	<div class="flex justify-center flex-col md:flex-row md:space-x-3 mt-3 ">
+	  	<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('home-page'); document.title = 'Home | Sidhartha Mazumder'"
+		  >
+		  Home <i class="fa-solid fa-house"></i>
+		</button>
+
+		<button
+		 class="mt-3 bg-[#263238] text-white p-1 
+		 pl-4 pr-4 rounded-[8px] font-bold
+		 hover:bg-[#37474F] outline-none w-full md:w-auto"
+		 onclick="handlePage('contact-page'); document.title = 'Contact | Sidhartha Mazumder'"
+		  >
+		  Contact <i class="fa-solid fa-envelope"></i>
+		</button>
+
+	</div>
+	  	</div>
+
+	</div>
+
 
 	<!-- KNOW MORE PAGE SECTION  -->
 	
