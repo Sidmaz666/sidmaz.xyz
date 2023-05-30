@@ -45,7 +45,7 @@ function generateRandomHexColor() {
 }
 
 function randomImage(){
-   const random = Math.floor(Math.random() * (26 - 1 + 1) + 1)
+   const random = Math.floor(Math.random() * (25 - 1 + 1) + 1)
    return `./img/extra/${random}.jpg`
 }
 
