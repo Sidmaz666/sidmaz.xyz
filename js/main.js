@@ -1,30 +1,23 @@
+let screenHeight
+const screenHeight_division = 6
+
 function loading_screen() {
   const loading_screenTimeout = setTimeout(() => {
     document.querySelector(".loading-page").classList.toggle("hidden");
     clearTimeout(loading_screenTimeout);
     document.querySelector(`.main-page`).classList.toggle('hidden')
     document.querySelector(`.home-page`).classList.toggle('hidden')
-    const screenHeight = window.innerHeight + 50;
+    screenHeight = window.innerHeight;
     document.body.insertAdjacentHTML("beforeend",
     `
       <section id="bg-animation" class="absolute flex-col top-0 left-0 w-full z-[-1] opacity-[50%]">
-      <div class="h-[${screenHeight/6}px] flex w-full">
-      </div>
-      <div class="h-[${screenHeight/6}px] flex w-full">
-      </div>
-      <div class="h-[${screenHeight/6}px] flex w-full">
-      </div>
-      <div class="h-[${screenHeight/6}px] flex w-full">
-      </div>
-      <div class="h-[${screenHeight/6}px] flex w-full">
-      </div>
-      <div class="h-[${screenHeight/6}px] flex w-full">
+      <div class="h-[${screenHeight/screenHeight_division}px] flex w-full justify-center items-center">
       </div>
       </section>
 
     `)
     bg_animation()
-  }, 3000);
+  }, Math.random() > 0.5 ? 700 : 1700);
 }
 
 function removeClassByRegex(element, classNameRegex) {
@@ -51,30 +44,64 @@ function generateRandomHexColor() {
 
 }
 
+function randomImage(){
+   const random = Math.floor(Math.random() * (36 - 1 + 1) + 1)
+   return `./img/extra/${random}.jpg`
+}
 
 function bg_animation() {
-  let selected_div = 0
+  let _div = 0
+  let translateBase = screenHeight / screenHeight_division
+  let translateTo = 0
+
+  const select_animate_div = document.querySelector('#bg-animation > div')
   setInterval(() => {
-   document
-      .querySelectorAll('#bg-animation > div')[selected_div]
-      .classList.add(`bg-[${generateRandomHexColor()}]`)
-   document
-      .querySelectorAll('#bg-animation > div')[selected_div]
-      .classList.add(`${Math.random() > 0.5 ? '-' : ''}translate-x-[${Math.floor(Math.random() * ((window.innerWidth / 2) - 100 + 1) + 50)}px]`)
-    document.querySelectorAll('#bg-animation > div')
-      .forEach((d,i) => {
-	if(i !== selected_div){
-	  removeClassByRegex(d,/bg-\[[^\]]+\]/ )
-	  removeClassByRegex(d,/translate-x-\[[^\]]+\]/ )
-	  removeClassByRegex(d,/-translate-x-\[[^\]]+\]/ )
-	}
-      })
-    if(selected_div == 5){
-      selected_div = 0
-    } else{
-      selected_div++
+    
+    screenHeight = window.innerHeight;
+
+    if(_div == 1)
+      translateTo = translateBase
+
+    if(_div >= 2 )
+      translateTo += translateBase 
+
+    removeClassByRegex(select_animate_div,/translate-y-\[[^\]]+\]/ )
+    removeClassByRegex(select_animate_div,/translate-x-\[[^\]]+\]/ )
+    removeClassByRegex(select_animate_div,/-translate-x-\[[^\]]+\]/ )
+    removeClassByRegex(select_animate_div,/bg-\[[^\]]+\]/ )
+    
+    if(document.querySelector('#bg-animation > div > img')){
+	document.querySelector('#bg-animation > div > img').remove()
     }
-  },300)
+    
+    const random_wh = Math.floor(Math.random() * (350 - 280 + 1 ) + 280)
+    if(Math.random() < 0.3){
+      select_animate_div.insertAdjacentHTML("beforeend",
+	`
+		<img 
+		class="rounded-md 
+		w-[${random_wh}px] h-[${random_wh}px]"
+		src="${randomImage()}" 
+		alt="Random Art"/>
+	`
+      )
+    } else {
+      select_animate_div.classList.add(`bg-[${generateRandomHexColor()}]`)
+    }
+
+
+    select_animate_div.classList.add(`translate-y-[${translateTo}px]`)
+    select_animate_div.classList.add(`${Math.random() < 0.5 ? '-' : ''}translate-x-[${Math.floor(Math.random() * ((window.innerWidth / 2) - 100 + 1) + 50)}px]`)
+
+
+    _div++
+
+   if(_div > screenHeight_division){
+      translateTo = 0 
+      _div = 0
+    }
+     
+  },270)
 }
 
 function handlePage(activePageClass){
