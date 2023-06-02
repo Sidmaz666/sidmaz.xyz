@@ -8,16 +8,29 @@ function loading_screen() {
     document.querySelector(`.main-page`).classList.toggle('hidden')
     document.querySelector(`.home-page`).classList.toggle('hidden')
     screenHeight = window.innerHeight;
+    const images = []
+    for(let i=1; i <= 25; i++){
+      images.push(
+	`
+		<img 
+		class="rounded-md img-anim-${i} hidden"
+		src="../img/extra/${i}.jpg" 
+		alt="Random Art"/>
+
+	`
+      )
+    }
     document.body.insertAdjacentHTML("beforeend",
     `
       <section id="bg-animation" class="absolute flex-col top-0 left-0 w-full z-[-1] opacity-[50%]">
       <div class="h-[${screenHeight/screenHeight_division}px] flex w-full justify-center items-center">
+      	${images.toString().replaceAll(',','')}
       </div>
       </section>
 
     `)
     bg_animation()
-  }, Math.random() > 0.5 ? 700 : 1700);
+  },3000);
 }
 
 function removeClassByRegex(element, classNameRegex) {
@@ -46,7 +59,7 @@ function generateRandomHexColor() {
 
 function randomImage(){
    const random = Math.floor(Math.random() * (25 - 1 + 1) + 1)
-   return `./img/extra/${random}.jpg`
+   return `.img-anim-${random}`
 }
 
 function bg_animation() {
@@ -69,22 +82,24 @@ function bg_animation() {
     removeClassByRegex(select_animate_div,/translate-x-\[[^\]]+\]/ )
     removeClassByRegex(select_animate_div,/-translate-x-\[[^\]]+\]/ )
     removeClassByRegex(select_animate_div,/bg-\[[^\]]+\]/ )
+
+    document.querySelectorAll('#bg-animation > div > img')
+      .forEach((img) => {
+	if(!img.getAttribute('class').includes('hidden') && img !== undefined){
+	  img.classList.add('hidden')
+	  removeClassByRegex(img,/w-\[[^\]]+\]/ )
+	  removeClassByRegex(img,/h-\[[^\]]+\]/ )
+	}
+      })
     
-    if(document.querySelector('#bg-animation > div > img')){
-	document.querySelector('#bg-animation > div > img').remove()
-    }
     
     const random_wh = Math.floor(Math.random() * (350 - 280 + 1 ) + 280)
-    if(Math.random() < 0.3){
-      select_animate_div.insertAdjacentHTML("beforeend",
-	`
-		<img 
-		class="rounded-md 
-		w-[${random_wh}px] h-[${random_wh}px]"
-		src="${randomImage()}" 
-		alt="Random Art"/>
-	`
-      )
+
+    if(Math.random() < 0.2){
+      const random_image = randomImage()
+      document.querySelector(`${random_image}`).classList.remove('hidden')
+      document.querySelector(`${random_image}`).classList.add(`h-[${random_wh}px]`)
+      document.querySelector(`${random_image}`).classList.add(`w-[${random_wh}px]`)
     } else {
       select_animate_div.classList.add(`bg-[${generateRandomHexColor()}]`)
     }
