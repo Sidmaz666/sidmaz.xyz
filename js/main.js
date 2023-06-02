@@ -20,6 +20,7 @@ function loading_screen() {
 	`
       )
     }
+    setTimeout(() => {
     document.body.insertAdjacentHTML("beforeend",
     `
       <section id="bg-animation" class="absolute flex-col top-0 left-0 w-full z-[-1] opacity-[50%]">
@@ -30,6 +31,7 @@ function loading_screen() {
 
     `)
     bg_animation()
+    },500)
   },3000);
 }
 
