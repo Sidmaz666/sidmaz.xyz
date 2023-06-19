@@ -97,7 +97,7 @@ function bg_animation() {
     
     const random_wh = Math.floor(Math.random() * (350 - 280 + 1 ) + 280)
 
-    if(Math.random() < 0.2){
+    if(Math.random() < 0.2 && !document.title.includes('Projects')){
       const random_image = randomImage()
       document.querySelector(`${random_image}`).classList.remove('hidden')
       document.querySelector(`${random_image}`).classList.add(`h-[${random_wh}px]`)
