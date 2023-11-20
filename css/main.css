@@ -88,6 +88,23 @@
   transform: translateX(0);
 }
 
+.hide-ham{
+    filter: blur(100);
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.show-ham{
+    filter: blur(0);
+    width: 100%;
+    opacity: 100;
+    display: flex;
+    transform: translateX(0);
+}
+
 @media screen and (min-width: 768px) {
   .slanted-rb-to-lb {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
