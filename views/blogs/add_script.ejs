@@ -1,0 +1,13 @@
+<script id="cheat-script">
+const get_title = window.location.search.replace('?topic_id=','')
+const set_title = get_title == "default" ? "" : get_title.toUpperCase() 
+document.title = "BLOGS ~ " + set_title;
+window.history.replaceState({}, document.title, "/blogs");
+document.addEventListener("DOMContentLoaded", function(){
+  setTimeout(() => {
+    	document.querySelector("#loader").remove()
+    	document.querySelector("#main").style.display = ""
+	document.querySelector("#cheat-script").remove()
+  },300)
+})
+</script>

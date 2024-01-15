@@ -1,0 +1,62 @@
+<%- include("../partials/head"); %>
+<script>
+document.title = "ADMIN ~ LOGIN"
+document.addEventListener("DOMContentLoaded", function(){
+  setTimeout(() => {
+    	document.querySelector("#loader").remove()
+    	document.querySelector("#main").style.display = "flex"
+  },300)
+})
+</script>
+<%- include("../partials/neck"); %>
+
+<div id="loader"
+ style="width: 100vw;height: 100vh;overflow: hidden;z-index: 100; position: absolute; top: 0;left: 0; display: flex;justify-content: center; align-items: center;background-color: #2c2821; color: #aeb9d6;"
+ >
+  <span>
+    Loading...
+  </span>
+</div>
+
+<div
+    id="main" style="display: none;"
+  class="bg-smoky-black-900/90 text-liberty-100 w-screen h-screen flex justify-center items-center"
+>
+  <form
+    class="w-[300px] flex bg-smoky-black-800 rounded-md p-5 pb-10 flex-col space-y-4"
+    action="admin/login"
+    method="POST"
+  >
+    <span
+      class="flex justify-center items-center mb-3 text-liberty-400 relative"
+    >
+      <span class="text-6xl">ADMIN LOGIN</span>
+      <i
+        class="fa-solid fa-lock text-7xl -translate-x-5 translate-y-4 -rotate-12"
+      ></i>
+      <div
+        class="h-[3px] bg-liberty-400 w-full absolute -translate-y-1/2"
+      ></div>
+    </span>
+    <input
+      class="p-2 text-xl text-liberty-300 bg-smoky-black-700 font-semibold rounded-md"
+      placeholder="Username"
+      type="text"
+      name="username"
+    />
+    <input
+      class="p-2 text-xl text-liberty-300 bg-smoky-black-700 font-semibold rounded-md"
+      placeholder="Password"
+      type="password"
+      name="password"
+    />
+    <button
+      class="font-semibold bg-primary-600 p-2 rounded-md hover:bg-primary-800"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
+<%- include("../partials/foot"); %>

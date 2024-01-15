@@ -1,0 +1,78 @@
+<link rel="stylesheet"
+href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/atom-one-dark-reasonable.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script id="cheat-script">
+  window.history.replaceState({}, document.title, "/admin");
+  document.title = "SIDMAZ - ADMIN PANEL";
+  setTimeout(() => {
+    document.getElementById("cheat-script").remove();
+  }, 100);
+</script>
+<script src="./js/tinymce/tinymce.min.js"></script>
+<script defer>
+  // Init Tiny MCE Function
+  function initTiny() {
+    tinymce.remove();
+    tinymce.init({
+      selector: ".blog-editor",
+      menubar: "edit view insert format",
+      file_picker_types: 'image',
+      file_picker_callback: function (cb, value, meta) {
+	let input = document.createElement('input');
+	input.setAttribute('type', 'file');
+	input.setAttribute('accept', 'image/*');
+	input.onchange = function () {
+	  let file = this.files[0];
+	  let reader = new FileReader();
+	  reader.onload = function () {
+	    let id = 'blobid' + (new Date()).getTime();
+	    let blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+	    let base64 = reader.result.split(',')[1];
+	    let blobInfo = blobCache.create(id, file, base64);
+	    blobCache.add(blobInfo);
+	    cb(blobInfo.blobUri(), { title: file.name });
+	  };
+	  reader.readAsDataURL(file);
+	};
+	input.click();
+      },
+      plugins:
+        "fullscreen searchreplace autolink directionality visualblocks visualchars image link media codesample charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount charmap emoticons autosave",
+      toolbar:
+        "undo redo | blocks fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify lineheight | fullscreen | bullist numlist indent | removeformat ",
+      height: "500px",
+      skin: "bootstrap",
+      content_css: "tinymce-5-dark",
+      setup: function (editor) {
+        editor.on("paste change undo redo input", function () {
+          tinymce.triggerSave();
+        });
+      },
+    });
+    setInterval(() => {
+      if (document.querySelector(".tox-promotion"))
+        document.querySelector(".tox-promotion").remove();
+      if (document.querySelector(".tox-statusbar__branding"))
+        document.querySelector(".tox-statusbar__branding").remove();
+    }, 800);
+  }
+  // Function to handle Pages
+  function handlePage(page) {
+    const pages = ["add-blogs", "add-topics", "view-topics","view-blogs"];
+    pages.forEach((p) => {
+      if (p == page) {
+        document.getElementById(p).classList.remove("hidden");
+      } else {
+        document.getElementById(p).classList.add("hidden");
+      }
+    });
+  }
+  // Initialize
+  document.addEventListener("DOMContentLoaded", function () {
+    handlePage("add-blogs");
+    initTiny();
+    hljs.highlightAll()
+    document.querySelector("#loader").remove()
+    document.querySelector("#main").style.display = "flex"
+  });
+</script>

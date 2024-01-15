@@ -1,0 +1,542 @@
+<%- include("../partials/head"); %>
+<%- include("./add_script.ejs"); %>
+<%- include("../partials/neck"); %>
+
+<div id="loader"
+ style="width: 100vw;height: 100vh;overflow: hidden;z-index: 100; position: absolute; top: 0;left: 0; display: flex;justify-content: center; align-items: center;background-color: #2c2821; color: #aeb9d6;"
+ >
+  <span>
+    Loading...
+  </span>
+</div>
+
+<div id="main" style="display: none;"
+     class="bg-smoky-black-800 overflow-x-hidden overflow-y-auto
+    flex items-center flex-col mt-0 text-liberty-300"
+>
+
+
+<button class="fixed top-3 left-3 text-3xl hover:text-liberty-400 p-2 z-50"
+    onclick="document.querySelector('#topic-menu').classList.remove('hidden')"
+ >
+ <i class="fa-solid fa-bars-staggered"></i>
+</button>
+
+<div class="fixed top-3 right-3 text-2xl p-2 z-50 flex space-x-3 items-center"
+ >
+ <a target="_blank" href="https://www.linkedin.com/in/sidhartha-mazumder/" class="hover:text-liberty-400">
+   <i class="fa-brands fa-linkedin"></i>
+ </a>
+ <a target="_blank" href="https://www.facebook.com/profile.php?id=100025904865040" class="hover:text-liberty-400">
+   <i class="fa-brands fa-facebook"></i>
+ </a>
+ <a target="_blank" href="https://github.com/Sidmaz666?tab=repositories" class="hover:text-liberty-400">
+ <i class="fa-brands fa-github"></i>
+ </a>
+
+</div>
+
+<div class="flex flex-col text-2xl 
+fixed top-0 left-0 z-50 hidden slide-r md:w-[40%] 
+w-full h-full overflow-x-hidden overflow-y-auto bg-smoky-black-900"
+id="topic-menu">
+  <button class="flex p-3 justify-end text-3xl bg-smoky-black-700/10 pr-4 items-center"
+    onclick="document.querySelector('#topic-menu').classList.add('hidden')"
+    >
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+   <a href="/" class="p-3 pl-5 text-3xl hover:bg-smoky-black-700/20">
+     <i class="fa-solid fa-house"></i>
+     Home
+   </a>  
+ <span class="p-2 pl-5 text-3xl text-liberty-400 bg-smoky-black-700/10 font-mono capitalize">Contents</span>
+    <a href="#about"
+      onclick="document.querySelector('#topic-menu').classList.add('hidden')"
+      class="pl-7 p-3 hover:bg-smoky-black-700/20">
+	      <span>About</span>
+    </a> 	
+    <a href="blogs"
+      class="pl-7 p-3 hover:bg-smoky-black-700/20">
+	      <span>Blogs</span>
+    </a> 	
+    <a href="#work"
+      onclick="document.querySelector('#topic-menu').classList.add('hidden')"
+      class="pl-7 p-3 hover:bg-smoky-black-700/20">
+	     <span>Work</span>
+  </a> 	
+    <a href="#skills"
+      onclick="document.querySelector('#topic-menu').classList.add('hidden')"
+      class="pl-7 p-3 hover:bg-smoky-black-700/20">
+	     <span>Skills</span>
+  </a> 	
+    <a href="#exp"
+      onclick="document.querySelector('#topic-menu').classList.add('hidden')"
+      class="pl-7 p-3 hover:bg-smoky-black-700/20">
+	     <span>Experience</span>
+  </a> 	
+    <a href="#contact"
+      onclick="document.querySelector('#topic-menu').classList.add('hidden')"
+      class="pl-7 p-3 hover:bg-smoky-black-700/20">
+	     <span>Contact</span>
+  </a> 	
+</div>
+
+
+<div id="intro" class="w-screen h-screen flex flex-col justify-center items-center relative">
+  <img src="./img/sidhartha_mazumder.jpg" class="w-40 h-40 border-glow rounded-full slide-r" alt="">
+  <div class="flex items-baseline">
+  <span class="typing-text md:text-2xl font-semibold mt-14 font-space text-center">
+    Hello there! How are you doin? 
+  </span>
+    <span class="w-[2px] bg-liberty-300/50 h-[20px] animate-pulse"></span>
+  </div>
+  <div class="absolute bottom-3 flex justify-center items-center slide-r delay-500">
+    <i class="fa-solid fa-angle-down text-3xl animate-bounce"></i>
+  </div>
+</div>
+
+<div id="about" class="w-screen h-screen flex flex-col justify-center items-center">
+  <div class="p-14 md:p-0 w-full md:w-auto flex flex-col space-y-3 md:space-y-5 font-space">
+    <span class="text-xs md:text-sm text-start slide-r">So who am I?</span>  
+    <span class="text-4xl md:text-7xl slide-r delay-500 md:flex"><span class="fuzz">Sid</span><span>hartha Mazumder</span>
+    </span>
+    <span class="slide-r delay-1000">
+      <span class="typing-text md:text-xl text-[0.800rem] font-space" data-speed="100">
+	FULL STACK WEB DEVELOPER
+      </span>
+    </span>
+    <span class="md:mt-6 md:w-[720px] w-[290px] slide-l delay-1000">
+      <span class="md:text-xl text-sm italic font-space">I'm a seasoned wordsmith and coder with 4 years in web development, fluent in HTML, CSS, Javascript, PHP, MySQL, and Node.js. Proficient in Tailwind CSS, React, and WordPress. A BCA graduate who finds harmony in crafting digital experiences and playing guitar. Welcome to my portfolio—a fusion of creativity and precision. </span>
+    </span>
+  </div>
+</div>
+
+<div id="work" class="w-screen h-screen flex flex-col justify-center items-center bg-[url('../img/bg_material.png')]">
+  	<span class="md:text-sm text-xs w-auto md:mb-5 mb-3 font-space slide-r delay-1000">So what I've build? </span>
+  	<div class="flex flex-col space-y-3 w-full md:w-auto p-5 md:p-0">
+		<div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 w-full md:w-auto">
+		<div class="md:w-80 md:h-60 h-[70px] w-full bg-smoky-black-800
+		  slide-r delay-1000 relative
+		  rounded-md cursor-pointer
+		  group
+		  md:block flex justify-between flex-row-reverse md:flex-row
+		  ">
+		  <img src="./img/work1.png" 
+		  class="w-[50%] md:w-full h-full md:object-none
+		  md:object-left-top object-cover object-top "
+		  alt="">
+		  <div class="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
+		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
+		    transition-all delay-100 ease-in
+		    md:group-hover:w-full
+		    md:group-hover:visible md:z-50 
+		    bg-smoky-black-800 relative">
+		    	<span class="md:text-xl font-semibold absolute 
+			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
+			  >Aniswim Website</span>
+			<div class="font-semibold text-amazon-500
+			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
+			  <i class="fa-brands fa-node-js"></i>
+			  <i class="fa-brands fa-css3"></i>
+			</div>
+			<a target="_blank" 
+			   href="https://aniswim.netlify.app/"
+			  class="md:p-2 rounded-md bg-liberty-600
+				 absolute md:relative md:bottom-0 
+				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
+			  hover:bg-liberty-700 text-white font-semibold">Visit</a>
+		  </div>
+		</div>
+
+		<div class="md:w-80 md:h-60 h-[70px] w-full bg-smoky-black-800
+		  slide-l delay-1000 relative
+		  rounded-md cursor-pointer
+		  group
+		  md:block flex justify-between flex-row-reverse md:flex-row
+		  ">
+		  <img src="./img/work6.png" 
+		  class="w-[50%] md:w-full h-full md:object-none
+		  object-cover object-top "
+		  alt="">
+		  <div class="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
+		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
+		    transition-all delay-100 ease-in
+		    md:group-hover:w-full
+		    md:group-hover:visible md:z-50 
+		    bg-smoky-black-800 relative">
+		    	<span class="md:text-xl font-semibold absolute 
+			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
+			  >Multiplayer Game</span>
+			<div class="font-semibold text-amazon-500
+			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
+			  <i class="fa-brands fa-node-js"></i>
+			  <i class="fa-brands fa-css3"></i>
+			</div>
+			<a target="_blank" 
+			   href="https://tactic.onrender.com/"
+			  class="md:p-2 rounded-md bg-liberty-600
+				 absolute md:relative md:bottom-0 
+				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
+			  hover:bg-liberty-700 text-white font-semibold">Visit</a>
+		  </div>
+		</div>
+
+		<div class="md:w-60 md:h-60 h-[70px] w-full bg-smoky-black-800
+		  slide-r delay-1000 relative
+		  rounded-md cursor-pointer
+		  group
+		  md:block flex justify-between flex-row-reverse md:flex-row
+		  ">
+		  <img src="./img/work3.png" 
+		  class="w-[50%] md:w-full h-full md:object-none
+		  md:object-center object-cover object-top "
+		  alt="">
+		  <div class="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
+		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
+		    transition-all delay-100 ease-in
+		    md:group-hover:w-full
+		    md:group-hover:visible md:z-50 
+		    bg-smoky-black-800 relative">
+		    	<span class="md:text-xl font-semibold absolute 
+			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
+			  >HTML Game</span>
+			<div class="font-semibold text-amazon-500
+			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
+			  <i class="fa-brands fa-html5"></i>
+			  <i class="fa-brands fa-css3"></i>
+			</div>
+			<a target="_blank" 
+			   href="https://fragileheart.netlify.app/"
+			  class="md:p-2 rounded-md bg-liberty-600
+				 absolute md:relative md:bottom-0 
+				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
+			  hover:bg-liberty-700 text-white font-semibold">Visit</a>
+		  </div>
+		</div>
+
+
+		</div>
+		<div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 w-full md:w-auto">
+		<div class="md:w-60 md:h-60 h-[70px] w-full bg-smoky-black-800
+		  slide-l delay-1000 relative
+		  rounded-md cursor-pointer
+		  group
+		  md:block flex justify-between flex-row-reverse md:flex-row
+		  ">
+		  <img src="./img/work5.png" 
+		  class="w-[50%] md:w-full h-full md:object-none
+		  md:object-right-top object-cover object-top "
+		  alt="">
+		  <div class="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
+		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
+		    transition-all delay-100 ease-in
+		    md:group-hover:w-full
+		    md:group-hover:visible md:z-50 
+		    bg-smoky-black-800 relative">
+		    	<span class="md:text-xl font-semibold absolute 
+			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
+			  >AI Story Maker</span>
+			<div class="font-semibold text-amazon-500
+			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
+			  <i class="fa-brands fa-python"></i>
+			  <i class="fa-brands fa-html5"></i>
+			</div>
+			<a target="_blank" 
+			   href="https://story-maker.onrender.com/"
+			  class="md:p-2 rounded-md bg-liberty-600
+				 absolute md:relative md:bottom-0 
+				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
+			  hover:bg-liberty-700 text-white font-semibold">Visit</a>
+		  </div>
+		</div>
+
+		<div class="md:w-80 md:h-60 h-[70px] w-full bg-smoky-black-800
+		  slide-r delay-1000 relative
+		  rounded-md cursor-pointer
+		  group
+		  md:block flex justify-between flex-row-reverse md:flex-row
+		  ">
+		  <img src="./img/work4.png" 
+		  class="w-[50%] md:w-full h-full md:object-none
+		  md:object-bottom object-cover object-top "
+		  alt="">
+		  <div class="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
+		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
+		    transition-all delay-100 ease-in
+		    md:group-hover:w-full
+		    md:group-hover:visible md:z-50 
+		    bg-smoky-black-800 relative">
+		    	<span class="md:text-xl font-semibold absolute 
+			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
+			  >Typing Test</span>
+			<div class="font-semibold text-amazon-500
+			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
+			  <i class="fa-brands fa-html5"></i>
+			  <i class="fa-brands fa-css3"></i>
+			</div>
+			<a target="_blank" 
+			   href="https://funkytype.netlify.app/"
+			  class="md:p-2 rounded-md bg-liberty-600
+				 absolute md:relative md:bottom-0 
+				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
+			  hover:bg-liberty-700 text-white font-semibold">Visit</a>
+		  </div>
+		</div>
+		<div class="md:w-80 md:h-60 h-[70px] w-full bg-smoky-black-800
+		  slide-l delay-1000 relative
+		  rounded-md cursor-pointer
+		  group
+		  md:block flex justify-between flex-row-reverse md:flex-row
+		  ">
+		  <img src="./img/work2.png" 
+		  class="w-[50%] md:w-full h-full md:object-none
+		  md:object-left-top object-cover object-top "
+		  alt="">
+		  <div class="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
+		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
+		    transition-all delay-100 ease-in
+		    md:group-hover:w-full
+		    md:group-hover:visible md:z-50 
+		    bg-smoky-black-800 relative">
+		    	<span class="md:text-xl font-semibold absolute 
+			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
+			  >Space Shooter</span>
+			<div class="font-semibold text-amazon-500
+			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
+			  <i class="fa-brands fa-html5"></i>
+			  <i class="fa-brands fa-css3"></i>
+			</div>
+			<a target="_blank" 
+			   href="https://space-impacted.netlify.app/"
+			  class="md:p-2 rounded-md bg-liberty-600
+				 absolute md:relative md:bottom-0 
+				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
+			  hover:bg-liberty-700 text-white font-semibold">Visit</a>
+		  </div>
+		</div>
+		</div>
+		<a href="https://github.com/Sidmaz666?tab=repositories" target="_blank"
+		  class="underline cursor-pointer mt-2 font-space text-baseline text-center md:text-start">
+		  View More <i class="fa-solid fa-arrow-right-long"></i>
+		</a>
+	</div>
+</div>
+
+<div id="skills"
+  class="w-screen h-screen flex flex-col justify-center items-center relative">
+  <div class="p-14 md:p-0 w-full md:w-auto flex flex-col flex-wrap space-y-3 md:space-y-5 font-space">
+    <span class="text-xs md:text-sm text-start typing-text pl-4 md:pl-0">So what do I know?? </span>  
+    <span class="text-4xl md:text-7xl slide-l delay-500 md:flex pl-4 md:pl-0">
+      Only Thing I Know is Nothing...
+    </span>
+    <div class="flex justify-start md:justify-center items-center flex-wrap slide-r delay-500">
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-html5"></i>
+	  HTML
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-css3"></i>
+	  CSS
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-js"></i>
+	  Javascript
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-php"></i>
+	  PHP
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-node-js"></i>
+	  NodeJS
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-python"></i>
+	  Python
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-solid fa-server"></i>
+	  SQL
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-solid fa-database"></i>
+	  MongoDB
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 px-2 py-1 bg-smoky-black-700 
+      rounded-full text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	  <i class="fa-brands fa-react"></i>
+	   React
+	</span>
+      </span>
+    <span class="inline-flex items-center
+      m-2 py-1 underline
+      text-xs md:text-sm font-semibold text-gray-50">
+	<span class="ml-1">
+	   & More..
+	</span>
+      </span>
+    </div>
+  </div>
+  <div class="p-2 w-full absolute bottom-0 left-0">
+    <div class="md:text-2xl text-lg font-space slide-r font-semibold italic flex justify-evenly md:px-10">
+	<i class="fa-brands fa-html5     m-2 l-to-r "></i>
+	<i class="fa-brands fa-css3      m-2 l-to-r " ></i>
+	<i class="fa-brands fa-js        m-2 l-to-r "></i>
+	<i class="fa-brands fa-node-js   m-2 l-to-r "></i>
+	<i class="fa-brands fa-php       m-2 l-to-r "></i>
+	<i class="fa-brands fa-react     m-2 l-to-r "></i>
+	<i class="fa-brands fa-python    m-2 l-to-r "></i>
+	<i class="fa-solid fa-server     m-2 l-to-r "></i>
+	<i class="fa-solid fa-database   m-2 l-to-r "></i>
+    </div>
+  </div>
+</div>
+
+
+<div id="exp"
+  class="w-screen h-screen flex flex-col justify-center items-center">
+  <div class="p-14 md:p-0 w-full md:w-auto flex flex-col flex-wrap space-y-3 md:space-y-5 font-space">
+    <span class="text-xs md:text-sm text-start typing-text pl-4 md:pl-0">Do you have any Experience? </span>  
+    <span class="text-4xl md:text-7xl slide-l delay-800 md:flex pl-4 md:pl-0">
+      Isn't this the Evidence?
+    </span>
+    <span class="text-xs md:text-sm text-start slide-l delay-1000 pl-4 md:pl-0">Anyway...</span>  
+    	<div class="flex flex-col justify-between items-start space-y-2 md:text-lg text-sm pl-5">
+		<span class="flex space-x-2 items-center slide-r delay-1000">
+		  <i class="fa-solid fa-circle-dot text-liberty-500"></i>
+		  <span class="">
+		    HTML,CSS,JS Developer (5Yr)
+		  </span>
+		</span>
+		<span class="flex space-x-2 items-center slide-l delay-1000">
+		  <i class="fa-solid fa-circle-dot text-liberty-500"></i>
+		  <span class="">
+		    WordPress Developer (3Yr)
+		  </span>
+		</span>
+		<a href="/blogs" class="flex space-x-2 items-center slide-r delay-1000">
+		  <i class="fa-solid fa-circle-dot text-amazon-500"></i>
+		  <span class="">
+		    Content Writer (2Yr)
+		  </span>
+		</a>
+	  </div>
+      </div>
+  </div>
+
+<div id="contact"
+  class="w-screen h-screen flex flex-col justify-center items-center bg-[url('../img/bg_material.png')]">
+  <div class="p-14 md:p-0 w-full md:w-auto flex flex-col flex-wrap space-y-3 md:space-y-5 font-space">
+    <span class="text-xs md:text-sm text-start typing-text pl-4 md:pl-0" data-speed="80">Help me gain more Experience.. </span>  
+    <span class="text-2xl md:text-7xl slide-l delay-800 md:flex pl-4 md:pl-0">
+      Shoot an Email.. <i class="fa-solid fa-rocket"></i> 
+    </span>  
+    <form action="#" id="contact-form" class="flex flex-col mt-7 font-space">
+      	<div class="mt-3 flex items-center md:text-xl text-sm bg-smoky-black-700 rounded-md slide-r delay-1000">
+	  <span class="flex items-center mx-2">
+	    <i class="fa-solid fa-user mr-2"></i>
+	    <span class="align-baseline capitalize">
+		Name
+	    </span>
+	  </span>
+	  <input type="text"
+	  class="p-2 bg-smoky-black-700 w-full
+	  border-l-2 border-liberty-600/50 rounded-r-md outline-none"
+	  autocomplete="off"
+	  name="contact-name" 
+	  id="contact-name" 
+	  placeholder="Jhon Dee">
+	</div>
+      	<div class="flex items-center md:text-xl text-sm bg-smoky-black-700 rounded-md mt-4 slide-l delay-1000">
+	  <span class="flex items-center mx-2">
+	    <i class="fa-solid fa-at mr-2"></i>
+	    <span class="align-baseline capitalize">
+		Email 
+	    </span>
+	  </span>
+	  <input type="text"
+	  class="p-2 bg-smoky-black-700 w-full
+	  border-l-2 border-liberty-600/50 rounded-r-md outline-none"
+	  autocomplete="off"
+	  name="contact-email" 
+	  id="contact-email" 
+	  placeholder="email@domain.top">
+	</div>
+      	<div class="flex flex-col md:text-xl text-sm mt-4 slide-r delay-1000">
+		<span class="p-2 bg-smoky-black-700 rounded-t-md">
+		  <i class="fa-solid fa-pen-to-square"></i>
+		  <span>Message</span>
+		</span>
+		<textarea 
+		  class="bg-smoky-black-700 p-2 resize-none outline-none border-t-2 border-liberty-600/50"
+		  placeholder="Your Message Goes Here..."
+		  name="contact-message"
+		  id="contact-message"
+		  ></textarea> 
+		<button type="submit" class="p-2 w-full bg-liberty-600 
+		  hover:bg-liberty-700 rounded-b-md font-semibold outline-none">
+		 <i class="fa-solid fa-paper-plane"></i> Send 
+		</button>
+	</div>
+    </form>
+  </div>
+</div>
+
+
+<div
+  class="w-screen h-[300px] flex flex-col justify-center 
+  items-center bg-smoky-black-900/30 bg-[url('../img/bg_material.png')]">
+  <div class="p-0 md:w-auto flex space-x-5 font-space items-center">
+    <span class="text-2xl md:text-7xl typing-text delay-800 flex pl-0">
+      Thank You 
+    </span>  
+    <span class="text-3xl md:text-6xl slide-l delay-1000">
+    	<i class="fa-solid fa-om"></i>
+    </span>
+  </div>
+</div>
+
+<div class="fixed md:top-4 top-16 w-full justify-center hidden" id="message-box">
+</div>
+
+<button class="fixed bottom-5 right-5 bg-smoky-black-700 rounded-full px-3 py-2 z-50 hidden opacity-0" id="top-btn" onclick="scrollToTop()">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+</div>
+
+<%- include("../partials/foot"); %>
