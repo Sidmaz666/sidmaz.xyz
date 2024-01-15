@@ -19,7 +19,9 @@ app.set("views", path.join(__dirname,"views"))
 app.use(express.static(path.join(__dirname,"public")))
 app.use(session({ 
   secret: process.env.SESSION_SECRET, 
-  resave: true, saveUninitialized: true
+  resave: true, 
+  saveUninitialized: true,
+  cookie: { secure: true, sameSite: "strict", maxAge: 7 * 24 * 60 * 60 * 1000 },
 }));
 app.use(express.json());
 app.use(express.urlencoded({
