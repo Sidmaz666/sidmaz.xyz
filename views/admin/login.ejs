@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function(){
   setTimeout(() => {
     	document.querySelector("#loader").remove()
     	document.querySelector("#main").style.display = "flex"
-  },300)
+  },1000)
 })
 </script>
 <%- include("../partials/neck"); %>
 
 <div id="loader"
- style="width: 100vw;height: 100vh;overflow: hidden;z-index: 100; position: absolute; top: 0;left: 0; display: flex;justify-content: center; align-items: center;background-color: #2c2821; color: #aeb9d6;"
+ style="width: 100vw;height: 100vh;overflow: hidden;z-index: 1000; position: absolute; top: 0;left: 0; display: flex;justify-content: center; align-items: center;background-color: #2c2821; color: #aeb9d6;"
  >
   <span>
     Loading...
@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function(){
 </div>
 
 <div
-    id="main" style="display: none;"
-  class="bg-smoky-black-900/90 text-liberty-100 w-screen h-screen flex justify-center items-center"
+    id="main"  class="bg-smoky-black-900/90 text-liberty-100 w-screen h-screen flex justify-center items-center"
+    style="display: none;"
 >
   <form
     class="w-[300px] flex bg-smoky-black-800 rounded-md p-5 pb-10 flex-col space-y-4"
