@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname,"public")))
 app.enable('trust proxy',1)
 app.use(session({ 
   secret: process.env.SESSION_SECRET, 
-  resave: true, 
+  resave: false, 
   saveUninitialized: true,
   name: require("crypto").randomUUID().replaceAll("-",""),
   cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
