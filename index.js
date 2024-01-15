@@ -35,3 +35,5 @@ app.all("/*",(req,res) => {
 })
 
 app.listen(port, backlog)
+
+module.exports = app
