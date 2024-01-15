@@ -717,6 +717,10 @@ code {
   top: 0.75rem;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -1581,12 +1585,12 @@ code {
   text-decoration-line: line-through;
 }
 
-.opacity-\[50\%\] {
-  opacity: 50%;
-}
-
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-\[50\%\] {
+  opacity: 50%;
 }
 
 .mix-blend-screen {
