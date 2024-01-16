@@ -6,8 +6,6 @@ const path = require("path")
 require("dotenv").config()
 
 const db_connect = require("./functions/db_connect")
-db_connect()
-
 
 const ADMIN = require("./routes/admin")
 const COMMON = require("./routes/common")
@@ -45,6 +43,8 @@ app.all("/*",(req,res) => {
   res.status(401).sendFile(path.join(__dirname,"public","404.html"))
 })
 
-app.listen(port, backlog)
+db_connect().then(() => {
+    app.listen(port, backlog)
+})
 
 module.exports = app
