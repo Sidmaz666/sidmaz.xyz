@@ -4,11 +4,15 @@ const jwt = require("jsonwebtoken")
 const app = express.Router()
 require("dotenv").config()
 
+const db_connect = require("../functions/db_connect")
+db_connect()
+
 const authenticateToken = require("../functions/admin_auth")
 const User = require("../schema/user");
 const Blogs = require("../schema/blogs");
 const Topics = require("../schema/topics");
 const Comment = require("../schema/comment")
+
 
 app.get('/', authenticateToken, async (req, res) => {
     const userId = req.user.userId;
