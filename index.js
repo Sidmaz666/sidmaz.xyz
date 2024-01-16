@@ -18,17 +18,6 @@ const backlog = () => {
 
 app.use(cors())
 app.set('trust proxy',1)
-app.use(session({ 
-  store:MongoStore.create({
-	mongoUrl: process.env.MONGODB_URI,
-        autoRemove: "interval",
-    	autoRemoveInterval: 10,
-  }),
-  secret: process.env.SESSION_SECRET, 
-  resave: true, 
-  saveUninitialized: false,
-  cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
-}));
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
@@ -46,6 +35,17 @@ app.all("/*",(req,res) => {
 })
 
 db_connect().then(() => {
+    app.use(session({ 
+      store:MongoStore.create({
+	    mongoUrl: process.env.MONGODB_URI,
+	    autoRemove: "interval",
+	    autoRemoveInterval: 10,
+      }),
+      secret: process.env.SESSION_SECRET, 
+      resave: true, 
+      saveUninitialized: false,
+      cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
+    }));
     app.listen(port, backlog)
 })
 
