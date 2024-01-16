@@ -17,8 +17,6 @@ const backlog = () => {
   console.log(`Server =>  http://localhost:${port}`)
 }
 
-app.set("view engine","ejs")
-app.set("views", path.join(__dirname,"views"))
 app.use(express.static(path.join(__dirname,"public")))
 app.set('trust proxy',1)
 app.use(session({ 
@@ -36,7 +34,8 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
-
+app.set("view engine","ejs")
+app.set("views", path.join(__dirname,"views"))
 
 app.get("/",(req,res) => { res.render("home") })
 app.use("/admin",ADMIN)
