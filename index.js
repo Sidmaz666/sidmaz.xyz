@@ -29,8 +29,8 @@ app.use(session({
 	mongoUrl: process.env.MONGODB_URI,
   }),
   secret: process.env.SESSION_SECRET, 
-  resave: false, 
-  saveUninitialized: false,
+  resave: true, 
+  saveUninitialized: true,
   cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
 }));
 
