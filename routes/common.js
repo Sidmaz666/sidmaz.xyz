@@ -2,9 +2,6 @@ const express = require("express")
 const crypto = require("crypto")
 const app = express.Router()
 
-const db_connect = require("../functions/db_connect")
-db_connect()
-
 const Blogs = require("../schema/blogs")
 const Topics = require("../schema/topics")
 const Comment = require("../schema/comment")

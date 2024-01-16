@@ -5,6 +5,10 @@ const app = express()
 const path = require("path")
 require("dotenv").config()
 
+const db_connect = require("./functions/db_connect")
+db_connect()
+
+
 const ADMIN = require("./routes/admin")
 const COMMON = require("./routes/common")
 
