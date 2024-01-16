@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname,"public")))
 app.set('trust proxy',1)
 app.use(session({ 
   store:MongoStore.create({
-	mongoUrl: process.env.MONGO_URL,
+	mongoUrl: process.env.MONGODB_URI,
         autoRemove: "interval",
     	autoRemoveInterval: 10,
   }),
