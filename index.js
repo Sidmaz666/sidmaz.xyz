@@ -8,13 +8,13 @@ require("dotenv").config()
 const ADMIN = require("./routes/admin")
 const COMMON = require("./routes/common")
 const db_connect = require("./functions/db_connect")
-db_connect()
 
 const port = process.env.PORT || 8080
 const backlog = () => {
   console.log(`Server =>  http://localhost:${port}`)
 }
 
+db_connect()
 app.set("view engine","ejs")
 app.set("views", path.join(__dirname,"views"))
 app.use(express.static(path.join(__dirname,"public")))
