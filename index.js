@@ -43,7 +43,7 @@ db_connect().then(() => {
       }),
       secret: process.env.SESSION_SECRET, 
       resave: true, 
-      saveUninitialized: false,
+      saveUninitialized: true,
       cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
     }));
     app.listen(port, backlog)
