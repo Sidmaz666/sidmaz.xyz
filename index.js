@@ -29,7 +29,7 @@ app.use(session({
 	mongoUrl: process.env.MONGODB_URI,
   }),
   secret: process.env.SESSION_SECRET, 
-  resave: true, 
+  resave: false, 
   saveUninitialized: false,
   cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
 }));
