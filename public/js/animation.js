@@ -27,12 +27,12 @@ const observer = new IntersectionObserver((entries) => {
       }
       checkLoader(
 	function(){
-	    if(entry.target.id == "intro") { document.getElementById("top-btn").style.display = "none" }
+	    if(entry.target.id == "intro") { document.getElementById("top-btn").remove() }
 	    entry.target.classList.add('animate')
 	}
       )
     } else {
-	  if(entry.target.id == "intro") { document.getElementById("top-btn").style.display = "block" }
+	  if(entry.target.id == "intro") { insertTopButton() }
 	  entry.target.classList.remove('animate')
       	  if(entry.target.classList.contains("typing-text") &&
 	    TYPING_TIMEOUT == undefined && entry.target.dataset.value !== undefined ){
@@ -146,4 +146,13 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth' 
     });
+}
+
+function insertTopButton(){
+	document.querySelector("#main").insertAdjacentHTML("beforeend", `
+		<button class="fixed bottom-5 right-5 bg-smoky-black-700 rounded-full px-3 py-2 z-40"
+		id="top-btn" onclick="scrollToTop()">
+    		<i class="fa-solid fa-chevron-up"></i>
+  		</button>
+	  `)
 }
