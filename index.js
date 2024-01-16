@@ -16,7 +16,8 @@ const backlog = () => {
   console.log(`Server =>  http://localhost:${port}`)
 }
 
-db_connect().then(() => {
+db_connect()
+
 app.use(cors())
 app.set('trust proxy',1)
 app.use(express.json());
@@ -34,6 +35,7 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
 }));
+
 app.use(express.static(path.join(__dirname,"public")))
 app.set("view engine","ejs")
 app.set("views", path.join(__dirname,"views"))
@@ -46,7 +48,6 @@ app.all("/*",(req,res) => {
   res.status(401).sendFile(path.join(__dirname,"public","404.html"))
 })
 
-    app.listen(port, backlog)
-})
+app.listen(port, backlog)
 
 module.exports = app
