@@ -1,5 +1,6 @@
 const express = require("express")
 const session = require('express-session');
+const cors = require('cors');
 const MongoStore = require('connect-mongo')
 const app = express()
 const path = require("path")
@@ -15,7 +16,7 @@ const backlog = () => {
   console.log(`Server =>  http://localhost:${port}`)
 }
 
-app.use(express.static(path.join(__dirname,"public")))
+app.use(cors())
 app.set('trust proxy',1)
 app.use(session({ 
   store:MongoStore.create({
@@ -32,6 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
+app.use(express.static(path.join(__dirname,"public")))
 app.set("view engine","ejs")
 app.set("views", path.join(__dirname,"views"))
 
