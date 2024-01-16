@@ -27,12 +27,10 @@ app.use(express.urlencoded({
 app.use(session({ 
   store:MongoStore.create({
 	mongoUrl: process.env.MONGODB_URI,
-	autoRemove: "interval",
-	autoRemoveInterval: 10,
   }),
   secret: process.env.SESSION_SECRET, 
   resave: true, 
-  saveUninitialized: true,
+  saveUninitialized: false,
   cookie: { secure: true, sameSite: "none", maxAge: 24 * 60 * 60 * 1000 },
 }));
 
