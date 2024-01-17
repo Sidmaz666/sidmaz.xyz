@@ -27,7 +27,11 @@ const observer = new IntersectionObserver((entries) => {
       }
       checkLoader(
 	function(){
-	    if(entry.target.id == "intro") { document.getElementById("top-btn").remove() }
+	    if(entry.target.id == "intro") { 
+	      if(document.getElementById("top-btn")){
+		document.getElementById("top-btn").remove()
+	      }
+	    }
 	    entry.target.classList.add('animate')
 	}
       )
@@ -149,10 +153,12 @@ function scrollToTop() {
 }
 
 function insertTopButton(){
+      if(!document.getElementById("top-btn")){
 	document.querySelector("#main").insertAdjacentHTML("beforeend", `
 		<button class="fixed bottom-5 right-5 bg-smoky-black-700 rounded-full px-3 py-2 z-40"
 		id="top-btn" onclick="scrollToTop()">
     		<i class="fa-solid fa-chevron-up"></i>
   		</button>
 	  `)
+      }
 }

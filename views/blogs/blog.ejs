@@ -12,7 +12,9 @@ cursor.src = `${window.location.origin}/js/cursor.js`
 cursor.setAttribute("defer","")
 document.head.appendChild(cursor)
 function initTiny() {
-  tinymce.remove();
+  if(tinymce){
+    tinymce.remove();
+  }
   tinymce.init({
     selector: ".blog-editor",
     menubar: "edit view insert format",

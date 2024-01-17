@@ -12,7 +12,9 @@ href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/atom-one
 <script defer>
   // Init Tiny MCE Function
   function initTiny() {
-    tinymce.remove();
+    if(tinymce){
+      tinymce.remove();
+    }
     tinymce.init({
       selector: ".blog-editor",
       menubar: "edit view insert format",
