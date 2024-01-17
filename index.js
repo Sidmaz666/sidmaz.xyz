@@ -16,11 +16,13 @@ const backlog = () => {
   console.log(`Server =>  http://localhost:${port}`)
 }
 
-db_connect()
 
-app.use(cors())
 app.set('trust proxy',1)
+app.set("view engine","ejs")
+app.set("views", path.join(__dirname,"views"))
+app.use(cors())
 app.use(express.json());
+app.use(db_connect())
 app.use(express.urlencoded({
   extended: true
 }));
@@ -35,8 +37,6 @@ app.use(session({
 }));
 
 app.use(express.static(path.join(__dirname,"public")))
-app.set("view engine","ejs")
-app.set("views", path.join(__dirname,"views"))
 
 app.get("/",(req,res) => { res.render("home") })
 app.use("/admin",ADMIN)
