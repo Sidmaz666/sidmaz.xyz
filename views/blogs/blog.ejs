@@ -7,10 +7,11 @@ document.title = `<%= blog.blog_title %>`;
 const tinyMCE = document.createElement("script")
 tinyMCE.src = `${window.location.origin}/js/tinymce/tinymce.min.js`
 document.head.appendChild(tinyMCE)
-const cursor = document.createElement("script")
-cursor.src = `${window.location.origin}/js/cursor.js`
-cursor.setAttribute("defer","")
-document.head.appendChild(cursor)
+tinyMCE.setAttribute("defer","")
+const Cursor = document.createElement("script")
+Cursor.src = `${window.location.origin}/js/cursor.js`
+Cursor.setAttribute("defer","")
+document.head.appendChild(Cursor)
 function initTiny() {
   if(tinymce){
     tinymce.remove();
@@ -63,12 +64,10 @@ function initTiny() {
 document.addEventListener("DOMContentLoaded", function(){
   setTimeout(() => {
         hljs.highlightAll()
+	initTiny()
     	document.querySelector("#loader").remove()
     	document.querySelector("#main").style.display = "flex"
   },300)
-  setTimeout(() => {
-    initTiny()
-  },500)
 })
 </script>
 <%- include("../partials/neck"); %>
