@@ -7,7 +7,6 @@ document.title = `<%= blog.blog_title %>`;
 const tinyMCE = document.createElement("script")
 tinyMCE.src = `${window.location.origin}/js/tinymce/tinymce.min.js`
 document.head.appendChild(tinyMCE)
-tinyMCE.setAttribute("defer","")
 const Cursor = document.createElement("script")
 Cursor.src = `${window.location.origin}/js/cursor.js`
 Cursor.setAttribute("defer","")
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	initTiny()
     	document.querySelector("#loader").remove()
     	document.querySelector("#main").style.display = "flex"
-  },300)
+  },500)
 })
 </script>
 <%- include("../partials/neck"); %>
