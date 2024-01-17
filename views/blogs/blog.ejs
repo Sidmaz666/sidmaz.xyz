@@ -63,8 +63,10 @@ document.addEventListener("DOMContentLoaded", function(){
         hljs.highlightAll()
     	document.querySelector("#loader").remove()
     	document.querySelector("#main").style.display = "flex"
-	initTiny()
   },300)
+  setTimeout(() => {
+    initTiny()
+  },500)
 })
 </script>
 <%- include("../partials/neck"); %>
