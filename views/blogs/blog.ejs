@@ -12,9 +12,11 @@ const Cursor = document.createElement("script")
 Cursor.src = `${window.location.origin}/js/cursor.js`
 Cursor.setAttribute("defer","")
 document.head.appendChild(Cursor)
+</script>
+<script defer>
 function initTiny() {
   if(tinymce){
-    tinymce.remove();
+  	tinymce.remove()
   }
   tinymce.init({
     selector: ".blog-editor",
