@@ -16,12 +16,12 @@ const backlog = () => {
   console.log(`Server =>  http://localhost:${port}`)
 }
 
+db_connect()
 
 app.set('trust proxy',1)
 app.set("view engine","ejs")
 app.set("views", path.join(__dirname,"views"))
 app.use(cors())
-app.use("*", (req,res,next) => { db_connect(req,res,next)})
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
