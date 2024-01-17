@@ -2,12 +2,15 @@
 <link rel="stylesheet"
 href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/atom-one-dark-reasonable.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script defer src="./js/cursor.js"></script>
 <script>
 document.title = `<%= blog.blog_title %>`;
 const tinyMCE = document.createElement("script")
 tinyMCE.src = `${window.location.origin}/js/tinymce/tinymce.min.js`
 document.head.appendChild(tinyMCE)
+const cursor = document.createElement("script")
+cursor.src = `${window.location.origin}/js/cursor.js`
+cursor.setAttribute("defer","")
+document.head.appendChild(cursor)
 function initTiny() {
   tinymce.remove();
   tinymce.init({
@@ -57,10 +60,10 @@ function initTiny() {
 // Initialize TinyMCE
 document.addEventListener("DOMContentLoaded", function(){
   setTimeout(() => {
-	initTiny()
         hljs.highlightAll()
     	document.querySelector("#loader").remove()
     	document.querySelector("#main").style.display = "flex"
+	initTiny()
   },300)
 })
 </script>
