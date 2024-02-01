@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./public/**/*.{js,html}",
-    "./views/**/*.{js,html,ejs}",
+    content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   presets: [],
   darkMode: "media", // or 'class'
@@ -407,7 +408,8 @@ module.exports = {
         '"Courier New"',
         "monospace",
       ],
-      space : ["Space"]
+      space : ["var(--font-space)"],
+      hindi : ["var(--font-hindi)"]
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

@@ -1,33 +1,31 @@
 {
   "name": "sidmaz.xyz",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "concurrently \"npm:nodemon\" \"npm:watch-css\"  ",
-    "nodemon": "nodemon index.js",
-    "watch-css": "postcss ./public/css/tailwind.css -o ./public/css/main.css --watch --verbose"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "autoprefixer": "^10.4.16",
+    "@emailjs/browser": "^3.12.1",
+    "@tinymce/tinymce-react": "^4.3.2",
+    "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
-    "cors" : "2.8.5",
-    "dotenv": "^16.3.1",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "connect-mongo": "5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.3",
-    "postcss-cli": "^11.0.0",
-    "tailwindcss": "^3.4.1"
+    "highlight.js": "^11.9.0",
+    "iron-session": "^8.0.1",
+    "mongoose": "^8.1.0",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.5.3",
+    "react-loader-spinner": "^6.1.6"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.0.2"
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }
