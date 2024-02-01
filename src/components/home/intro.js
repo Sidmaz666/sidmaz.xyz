@@ -2,6 +2,8 @@ import TextTypeAnimation from "../utils/typing_text"
 import SlideAnimation from "../utils/slide_animation"
 import BorderGlow from "../utils/border_glow"
 import { FaAngleDown } from "react-icons/fa"
+import sid_image from "../../../public/img/sidhartha_mazumder.jpg"
+import Image from "next/image"
 
 export default function Intro(){
   return (
@@ -19,7 +21,7 @@ export default function Intro(){
       "#ad82ff", 
       "#d896ff", 
       ]}>
-	  <img src="./img/sidhartha_mazumder.jpg"
+	  <Image src={sid_image} width={160} height={160}
 	  className="w-40 h-40 rounded-full"
 	  alt="Sidhartha Mazumder"
 	  />

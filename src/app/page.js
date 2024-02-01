@@ -22,7 +22,7 @@ export default function Home() {
 	setTimeout(() => {
 		setLoader(false)
 	  	Cursor()
-	},500)
+	},1000)
  },[])
   useEffect(() => {
 	if(inView){
