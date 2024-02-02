@@ -21,7 +21,6 @@ export default function BlogList(){
 	    const data = await req.data
 	    setBlogs(data.blogs)
       	    setLastPage(data.lastPage)
-            console.log(data)
 	    setLoader(false)
     }
     fetch_blogs(topic,page)
