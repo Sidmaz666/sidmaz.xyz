@@ -46,13 +46,13 @@ export default function EditBlog({topics,data,setMessage,setEdit}){
     		defaultValue={JSON.parse(data).blog_title}
     		/>
 		<Editor
+		apiKey='n8wmf3ledez9f6i7w9nu9nxg9fji45l8wo332vo9tjgp40iz'
 		initialValue={JSON.parse(data).blog_content}
 		onInit={(evt, editor) => (editorRef.current = editor)}
     		value={blogContent}
     		onEditorChange={setContentValue}
     		id="blog_editor"
 		textareaName="blog_editor"
-    		apiKey='n8wmf3ledez9f6i7w9nu9nxg9fji45l8wo332vo9tjgp40iz'
 		init={
 		  EditorConfig
 		}

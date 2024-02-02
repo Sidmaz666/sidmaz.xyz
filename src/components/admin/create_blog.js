@@ -65,12 +65,12 @@ export default function CreateBlog({topics,setMessage}){
     		name="blog_title"
     		/>
 		<Editor
+		apiKey='n8wmf3ledez9f6i7w9nu9nxg9fji45l8wo332vo9tjgp40iz'
 		onInit={(evt, editor) => (editorRef.current = editor)}
     		value={blogContent}
     		onEditorChange={setContentValue}
     		id="blog_editor"
 		textareaName="blog_editor"
-    		apiKey='n8wmf3ledez9f6i7w9nu9nxg9fji45l8wo332vo9tjgp40iz'
 		init={
 		  EditorConfig
 		}

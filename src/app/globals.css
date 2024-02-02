@@ -7,8 +7,23 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  ::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+  }
+}
+
+pre , code {
+  ::-webkit-scrollbar{
+    display: block;
+    width: 8px;
+  }
 }
 
 ::-webkit-scrollbar-track {
