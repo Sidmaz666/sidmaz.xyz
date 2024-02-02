@@ -10,7 +10,7 @@ import post_comment from "../server/blog/comment";
 import {useFormState} from "react-dom"
 
 
-export default function BlogView({comments,blog}){
+export default function BlogView({comments,blog,related_blogs}){
   const [state,post_comment_action] = useFormState(post_comment,{})
   const [isMessage,setMessage] = useState({show:false,message:""})
   useEffect(() => {
@@ -27,9 +27,13 @@ export default function BlogView({comments,blog}){
   const comment_date = (date) => {
        return date.toString().split("T")[0]
   }
+  const blog_date = (date) => {
+    const data = new Date(date)
+    return data.getDate() + '/' +(data.getUTCMonth() + 1) + '/'+ data.getUTCFullYear()
+  }
   return (
 	<div className="w-screen h-screen bg-smoky-black-800 overflow-x-hidden overflow-y-auto
-	  absolute top-0 left-0 flex items-center flex-col space-y-5"
+	  absolute top-0 left-0 flex items-center flex-col space-y-5 pb-8"
 	  >
           {
 	    isMessage.show == true ? (
@@ -99,6 +103,35 @@ export default function BlogView({comments,blog}){
 		  </span>
 	      }
 	      </div>
+    		{
+		  related_blogs && JSON.parse(related_blogs).length > 0 ?
+		  JSON.parse(related_blogs).map((related_blog) => {
+		  return (
+		  <div key={related_blog.blog_id} className="p-2 w-full
+		  flex-col md:flex-row mb-3
+		  flex justify-between bg-smoky-black-700 text-liberty-300 rounded-md md:items-end items-start">
+		      <div className="flex flex-col capitalize p-1">
+		      <span className="flex space-x-2 items-baseline">
+			<Link href={`/blog/${related_blog.blog_id}`} className="text-2xl underline">
+		    		{ related_blog.blog_title }
+			</Link>
+			<Link href={`/blog?topic=${related_blog.blog_topic}`} className="text-md underline">
+			  ({ related_blog.blog_topic })
+			</Link>
+			</span>
+			  <span className="text-sm mt-1">
+		    		{ related_blog.blog_description }
+			  </span>
+			</div>
+			<span className="text-sm text-start 
+		      	 w-full md:w-auto font-mono md:text-end md:p-2">
+		    		{blog_date(related_blog.blog_creation)}
+		    	</span>
+		      </div>
+		    )
+		  })
+		  : null
+		}
 	    </div>
 	  </div>
 	</div>

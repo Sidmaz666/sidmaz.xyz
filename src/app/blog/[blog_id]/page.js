@@ -24,9 +24,14 @@ export default async function ViewBlog({ params }){
     return notFound()
   }
   const comments = await Comments.find({ blog_id: params.blog_id }).sort({blog_creation:-1})
+  const related_blogs = await Blogs.find({
+  blog_topic: blog.blog_topic,
+  blog_publish: true,
+  blog_id: { $ne:params.blog_id }
+  }).sort({ blog_creation: -1 }).limit(5)
   return (
     <>
-      <BlogView blog={JSON.stringify(blog)} comments={JSON.stringify(comments)} />
+      <BlogView blog={JSON.stringify(blog)} comments={JSON.stringify(comments)} related_blogs={JSON.stringify(related_blogs)} />
    </>
   )
 }
