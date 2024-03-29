@@ -1,3 +1,4 @@
+import {FaJs} from "react-icons/fa6"
 import SlideAnimation from "../utils/slide_animation"
 import { FaNodeJs, FaHtml5, FaCss3, FaPython } from "react-icons/fa"
 
@@ -87,8 +88,8 @@ export default function Work(){
 		  md:block flex justify-between flex-row-reverse md:flex-row
 		  ">
 		  <img src="./img/work3.png"
-		  className="w-[50%] md:w-full h-full md:object-none
-		  md:object-center object-cover object-top "
+		  className="w-[50%] md:w-full h-full object-cover
+		  object-left"
 		  alt=""/>
 		  <div className="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
 		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center
@@ -98,16 +99,16 @@ export default function Work(){
 		    bg-smoky-black-800 relative">
 		    	<span className="md:text-xl font-semibold absolute
 			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
-			  >HTML Game</span>
+			  >Code Editor</span>
 			<div className="font-semibold text-amazon-500
 			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
     			 <div className="flex space-x-2 md:mb-2">
-			  <FaHtml5/>
+			  <FaJs/>
 			  <FaCss3/>
     			</div>
 			</div>
 			<a target="_blank"
-			   href="https://fragileheart.netlify.app/"
+			   href="https://github.com/Sidmaz666/tux"
 			  className="md:p-2 rounded-md bg-liberty-600
 				 absolute md:relative md:bottom-0
 				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
