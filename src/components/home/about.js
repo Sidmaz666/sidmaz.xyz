@@ -13,7 +13,7 @@ export default function About(){
       data-speed="100" text={"FULL STACK WEB DEVELOPER"} />
     </SlideAnimation>
     <SlideAnimation direction="left" classes="md:mt-6 md:w-[720px] w-[290px] delay-1000">
-      <span className="md:text-xl text-sm italic font-space">I'm a seasoned wordsmith and coder with 4 years in web development, fluent in HTML, CSS, Javascript, PHP, MySQL, and Node.js. Proficient in Tailwind CSS, React, and WordPress. A BCA graduate who finds harmony in crafting digital experiences and playing guitar. Welcome to my portfolio—a fusion of creativity and precision. </span>
+      <span className="md:text-xl text-sm italic font-space">A seasoned wordsmith and coder with 5 years in web development, fluent in HTML, CSS, Javascript, PHP, MySQL, and Node.js. Proficient in Tailwind CSS, React, and WordPress. A BCA graduate who finds harmony in crafting digital experiences and playing guitar.</span>
     </SlideAnimation>
     </div>
   </section>

@@ -2,12 +2,12 @@ import TextTypeAnimation from "../utils/typing_text"
 import SlideAnimation from "../utils/slide_animation"
 import BorderGlow from "../utils/border_glow"
 import { FaAngleDown } from "react-icons/fa"
-import sid_image from "../../../public/img/sidhartha_mazumder.jpg"
+import sid_image from "../../../public/img/sidhartha_mazumder.png"
 import Image from "next/image"
 
 export default function Intro(){
   return (
-  <div className="w-screen h-screen flex flex-col justify-center items-center relative">
+  <section className="w-screen h-screen flex flex-col justify-center items-center relative">
     <SlideAnimation
       direction="right"
     >
@@ -38,6 +38,6 @@ export default function Intro(){
       classes="absolute bottom-3 flex justify-center items-center delay-500">
 	<FaAngleDown className="text-3xl animate-bounce"/>
     </SlideAnimation>
-  </div>
+  </section>
   )
 }

@@ -88,8 +88,8 @@ export default function Work(){
 		  md:block flex justify-between flex-row-reverse md:flex-row
 		  ">
 		  <img src="./img/work3.png"
-		  className="w-[50%] md:w-full h-full object-cover
-		  object-left"
+		  className="w-[50%] md:w-full h-full md:object-none object-fill
+		  object-left-top"
 		  alt=""/>
 		  <div className="md:absolute w-full md:top-0 md:left-0 md:w-0 md:invisible
 		    md:flex h-full md:flex-col md:space-y-2 md:justify-center md:items-center

@@ -1,5 +1,6 @@
-import { FaLinkedin,FaFacebook,FaGithub } from "react-icons/fa";
+import { FaLinkedin,FaGithub } from "react-icons/fa";
 import SlideAnimation from "../utils/slide_animation"
+import {FaXTwitter} from "react-icons/fa6";
 
 export default function FloatingContact() {
   return (
@@ -13,10 +14,10 @@ export default function FloatingContact() {
       </a>
       <a
         target="_blank"
-        href="https://www.facebook.com/profile.php?id=100025904865040"
+        href="https://twitter.com/Sidmaz666"
         className="hover:text-liberty-400"
       >
-	  <FaFacebook/>
+	  <FaXTwitter/>
       </a>
       <a
         target="_blank"
