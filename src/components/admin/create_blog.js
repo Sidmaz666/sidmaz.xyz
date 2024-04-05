@@ -27,8 +27,11 @@ export const EditorConfig = {
 	};
 	input.click();
       },
+      external_plugins:{
+	"pageembed": "/js/tinymce_pageembed/plugin.min.js"
+      },
       plugins:
-        "fullscreen searchreplace autolink directionality visualblocks visualchars image link media codesample charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount charmap emoticons autosave code",
+        "fullscreen searchreplace autolink directionality visualblocks visualchars image link media codesample charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount charmap emoticons autosave code pageembed",
       toolbar:
         "undo redo | blocks fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify lineheight | fullscreen | bullist numlist indent | removeformat ",
       height: "500px",
