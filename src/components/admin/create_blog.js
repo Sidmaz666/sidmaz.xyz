@@ -28,7 +28,7 @@ export const EditorConfig = {
 	input.click();
       },
       plugins:
-        "fullscreen searchreplace autolink directionality visualblocks visualchars image link media codesample charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount charmap emoticons autosave",
+        "fullscreen searchreplace autolink directionality visualblocks visualchars image link media codesample charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount charmap emoticons autosave code",
       toolbar:
         "undo redo | blocks fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify lineheight | fullscreen | bullist numlist indent | removeformat ",
       height: "500px",
