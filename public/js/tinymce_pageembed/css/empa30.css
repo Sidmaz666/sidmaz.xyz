@@ -7,6 +7,15 @@
  * Version: 7.0.0-22
  */
 
+.tiny-pageembed{
+  width:100%;
+}
+
+.tiny-pageembed > iframe {
+  width:100%;
+  height:500px;
+}
+
 .tiny-pageembed.tiny-pageembed--21by9 {
   padding-top: 42.857143%;
 }
