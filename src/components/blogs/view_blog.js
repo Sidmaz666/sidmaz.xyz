@@ -91,8 +91,12 @@ export default function BlogView({comments,blog,related_blogs}){
 		      bg-smoky-black-800/50 rounded-md mt-3 mb-3 items-center"
 		      key={comment.comment_creation}
 		     >
-		    <span>
-		      {comment.comment} - ({comment_date(comment.comment_creation)})
+		    <span className="flex items-center space-x-2">
+		      <img className="w-[40px] h-[40px] rounded-full border border-slate-600"
+			src={`https://robohash.org/${comment.comment_id}`} alt={comment.comment}/>
+		      <span>
+			{comment.comment} - ({comment_date(comment.comment_creation)})
+		      </span>
 		    </span>
 		    </div>
 		  )
