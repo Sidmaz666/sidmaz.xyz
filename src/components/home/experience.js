@@ -16,6 +16,12 @@ export default function Experience(){
     <SlideAnimation direction={"left"}
     classes="text-xs md:text-sm text-start delay-1000 pl-4 md:pl-0">Anyway...</SlideAnimation>  
     	<div className="flex flex-col justify-between items-start space-y-2 md:text-lg text-sm pl-5">
+		<SlideAnimation direction={"left"} classes="flex space-x-2 items-center delay-1000">
+		  <FaCircleDot className="text-french-raspberry-500"/>
+		  <span className="">
+		    UI Developer (<a href="https://aeroaegis.com/" target="_blank" className="text-blue-500">@AeroAegis</a>)
+		  </span>
+		</SlideAnimation>
 		<SlideAnimation direction={"right"} classes="flex space-x-2 items-center delay-1000">
 		  <FaCircleDot className="text-liberty-500"/>
 		  <span className="">

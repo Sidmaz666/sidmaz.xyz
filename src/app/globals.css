@@ -94,22 +94,6 @@ pre , code {
   background-image: url("../../public/img/bg_material.png");
 }
 
-@keyframes moveLeftToRight {
-    0% {
-	transform: translateX(0%);
-    }
-    50% {
-	transform: translateX(80%);
-    } 
-    100%{
-	transform: translateX(0%);
-    }
-}
-
-.l-to-r {
-    animation: moveLeftToRight 2s linear infinite;
-}
-
 #blog_editor {
   display: none;
 }

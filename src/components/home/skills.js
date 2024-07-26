@@ -1,6 +1,7 @@
 import {FaCss3, FaDatabase, FaHtml5, FaJs, FaNodeJs, FaPhp, FaPython, FaReact, FaServer} from "react-icons/fa"
 import SlideAnimation from "../utils/slide_animation"
 import TextTypeAnimation from "../utils/typing_text"
+import Marquee from "react-fast-marquee";
 
 export default function Skills(){
   return(
@@ -113,20 +114,20 @@ export default function Skills(){
       </span>
     </SlideAnimation>
   </div>
-  <div className="p-2 w-full absolute bottom-0 left-0">
-    <SlideAnimation
-      direction={"left"}
-      classes="md:text-2xl text-lg font-space font-semibold italic flex justify-evenly md:px-10">
-	<FaHtml5 className="m-2 l-to-r "/>
-	<FaCss3 className="m-2 l-to-r "/>
-	<FaJs className="m-2 l-to-r "/>
-	<FaNodeJs className="m-2 l-to-r "/>
-	<FaPhp className="m-2 l-to-r "/>
-	<FaReact className="m-2 l-to-r "/>
-	<FaPython className="m-2 l-to-r "/>
-	<FaServer className="m-2 l-to-r "/>
-	<FaDatabase className="m-2 l-to-r "/>
-     </SlideAnimation>
+  <div className="p-2 md:px-10 w-full absolute bottom-0 left-0">
+  <Marquee
+  	autoFill={true}
+      className="md:text-4xl text-lg font-space font-semibold italic flex justify-around w-full">
+	<FaHtml5 className="m-2 mr-14"/>
+	<FaCss3 className="m-2 mr-14"/>
+	<FaJs className="m-2 mr-14"/>
+	<FaNodeJs className="m-2 mr-14"/>
+	<FaPhp className="m-2 mr-14"/>
+	<FaReact className="m-2 mr-14"/>
+	<FaPython className="m-2 mr-14"/>
+	<FaServer className="m-2 mr-14"/>
+	<FaDatabase className="m-2 mr-14"/>
+   </Marquee>
     </div>
   </section>
   )

@@ -1,6 +1,6 @@
 import {FaJs} from "react-icons/fa6"
 import SlideAnimation from "../utils/slide_animation"
-import { FaNodeJs, FaHtml5, FaCss3, FaPython } from "react-icons/fa"
+import { FaNodeJs, FaHtml5, FaCss3 } from "react-icons/fa"
 
 export default function Work(){
   return(
@@ -36,7 +36,7 @@ export default function Work(){
     			</div>
 			</div>
 			<a target="_blank"
-			   href="https://aniswim.netlify.app/"
+			   href="https://aniswim.vercel.app/"
 			  className="md:p-2 rounded-md bg-liberty-600
 				 absolute md:relative md:bottom-0
 				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
@@ -138,16 +138,16 @@ export default function Work(){
 		    bg-smoky-black-800 relative">
 		    	<span className="md:text-xl font-semibold absolute
 			      md:relative top-2 md:top-0 left-16 md:left-0 text-nowrap text-sm"
-			  >AI Story Maker</span>
+			  >Mindspace</span>
 			<div className="font-semibold text-amazon-500
 			  absolute md:relative md:top-0 top-2  md:left-0 left-2">
     			 <div className="flex space-x-2 md:mb-2">
-			  <FaPython/>
-			  <FaCss3/>
+				 <FaNodeJs/>
+				 <FaCss3/>
     			</div>
 			</div>
 			<a target="_blank"
-			   href="https://story-maker.onrender.com/"
+			   href="https://mindspace-weku.onrender.com/"
 			  className="md:p-2 rounded-md bg-liberty-600
 				 absolute md:relative md:bottom-0
 				 bottom-2 md:left-0 left-0 w-[80%] md:w-auto mr-5 md:mr-0 ml-5 md:ml-0 text-center
